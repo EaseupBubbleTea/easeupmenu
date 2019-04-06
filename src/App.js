@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import ReactFullpage from '@fullpage/react-fullpage';
 class App extends Component {
   onLeave(origin, destination, direction) {
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <ReactFullpage
         anchors={["firstPage", "secondPage", "thirdPage"]}
-        sectionsColor={["#282c34", "#ff5f45", "#0798ec"]}
+        sectionsColor={["#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34"]}
         scrollOverflow={true}
         onLeave={this.onLeave.bind(this)}
         afterLoad={this.afterLoad.bind(this)}
@@ -27,7 +27,9 @@ class App extends Component {
               </div>
               <div className="section">
                 <div className="slide">
-                  <h3>ชานมไข่มุก</h3>
+                    <div className="menuItem__milkGreenTea">
+                        {/* <h3>Milk Green Tea</h3> */}
+                    </div>
                 </div>
                 <div className="slide">
                   <h3>ราคา</h3>
