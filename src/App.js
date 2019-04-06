@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.scss';
 import ReactFullpage from '@fullpage/react-fullpage';
 import greenTea from './img/greenTea.jpg'
-import { green } from 'ansi-colors';
 
 class App extends Component {
   onLeave(origin, destination, direction) {
