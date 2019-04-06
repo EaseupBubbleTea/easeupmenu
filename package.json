@@ -2,8 +2,10 @@
   "name": "easeupmenu",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://EaseupBubbleTea.github.io/easeupmenu/",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.13",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
