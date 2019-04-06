@@ -1,26 +1,54 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import ReactFullpage from '@fullpage/react-fullpage';
 class App extends Component {
+  onLeave(origin, destination, direction) {
+    console.log("Leaving section " + origin.index);
+  }
+  afterLoad(origin, destination, direction) {
+    console.log("After load: " + destination.index);
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <ReactFullpage
+        anchors={["firstPage", "secondPage", "thirdPage"]}
+        sectionsColor={["#282c34", "#ff5f45", "#0798ec"]}
+        scrollOverflow={true}
+        onLeave={this.onLeave.bind(this)}
+        afterLoad={this.afterLoad.bind(this)}
+        render={({ state, fullpageApi }) => {
+          return (
+            <div id="fullpage-wrapper">
+              <div className="section section1">
+                <h3>Easeup</h3>
+                <button onClick={() => fullpageApi.moveSectionDown()}>
+                  Move down
+                </button>
+              </div>
+              <div className="section">
+                <div className="slide">
+                  <h3>ชานมไข่มุก</h3>
+                </div>
+                <div className="slide">
+                  <h3>ราคา</h3>
+                  <h2>เล็ก 40</h2>
+                  <h2>กลาง 50</h2>
+                </div>
+              </div>
+              <div className="section">
+                <div className="slide">
+                  <h3>ชาเผือก</h3>
+                </div>
+                <div className="slide">
+                  <h3>ราคา</h3>
+                  <h2>เล็ก 40</h2>
+                  <h2>กลาง 50</h2>
+                </div>
+              </div>
+            </div>
+          );
+        }}
+      />
     );
   }
 }
