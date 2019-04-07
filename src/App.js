@@ -34,28 +34,6 @@ class App extends Component {
       menuCss: ["menuItem", "menuItem__freshYuZu"],
       detailCss: ["item-detail", "item-detail__freshYuZu"]
     },
-    {
-      name: "signature1",
-      number : 3,
-      desc: `เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา\
-    จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน\
-    นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp\
-    จนได้ชานมคุณภาพอย่างที่เราภูมิใจ`,
-      prices: { small: 40, large: 50 },
-      menuCss: ["menuItem", "menuItem__greentea"],
-      detailCss: ["item-detail", "item-detail__signature"]
-    },
-    {
-      name: "signature2",
-      number : 4,
-      desc: `เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา\
-    จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน\
-    นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp\
-    จนได้ชานมคุณภาพอย่างที่เราภูมิใจ`,
-      prices: { small: 40, large: 50 },
-      menuCss: ["menuItem", "menuItem__greentea"],
-      detailCss: ["item-detail", "item-detail__signature"]
-    },
 
   ];
 
@@ -70,9 +48,8 @@ class App extends Component {
     return (
       <div className="section" key={key}>
         <div className="slide">
-          <div className={menuCss}>
-            <div className="slideHeader">{key} #{itemNumber}</div>
-            
+        <div className="slideHeader">{key} #{itemNumber}</div>     
+          <div className={menuCss}>       
           </div>
         </div>
         <div className="slide">

@@ -124,9 +124,8 @@ button {
 .slideHeader {
   font-size: 3vh;
     color: #d3d3d3;
-    display: -webkit-flex;
     display: flex;
     padding: 3vh;
-    position: fixed;
+    position: absolute;
     top: 2px;
 }
