@@ -35,6 +35,18 @@ class App extends Component {
       menuCss: ["menuItem", "menuItem__freshYuZu"],
       detailCss: ["item-detail", "item-detail__freshYuZu"]
     },
+    {
+      name: "Oolong iced tea ชาอู่หลงเย็น",
+      number : 3,
+      desc: `
+      เพื่อจะได้เครื่องดื่มที่มอบความสดชื่นทันทีในดื่มแรก ของเดือนเมษายน
+      ทางร้านจึงเลือก ผลไม้ที่ตอบโจทย์ จนไปพบกับความเป็นเอกลักษณ์ของส้มยูสุ 
+      ด้วยความหอมอโรม่าของส้ม บวกกับบับเบิ้ลสอดไส้น้ำลิ้นจี่ 
+      จึงเป็นอีกแก้วที่พร้อมรับมือกับสงกรานต์ได้เป็นอย่างดี`,
+      prices: { small: 40, large: 50 },
+      menuCss: ["menuItem", "menuItem__oolongIcedTea"],
+      detailCss: ["item-detail"]
+    },
 
   ];
 

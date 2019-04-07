@@ -85,19 +85,21 @@ button {
   &__freshYuZu {
     background-image: url("./img/freshYuZu.jpg");
   }
+  &__oolongIcedTea {
+    background-image: url("./img/oolongicedtea.jpg");
+  }
 }
 
 .item-detail {
+  font-size: 4vh;
+  color: #d3d3d3;
+  padding: 6vh;
+
   &__signature {
-    font-size: 4vh;
-    color: #d3d3d3;
-    padding: 6vh;
   }
 
   &__freshYuZu {
-    font-size: 4vh;
-    color: #d3d3d3;
-    padding: 6vh;
+
   }
 }
 
