@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "e4f5c0164df0e1abb422",
-    "url": "/easeupmenu/static/css/main.26a67095.chunk.css"
+    "revision": "551e80fded8c7ee3ab9d",
+    "url": "/easeupmenu/static/css/main.7dc84a5c.chunk.css"
   },
   {
-    "revision": "e4f5c0164df0e1abb422",
+    "revision": "551e80fded8c7ee3ab9d",
     "url": "/easeupmenu/static/js/main.33ff0d0a.chunk.js"
   },
   {
@@ -20,10 +20,6 @@ self.__precacheManifest = [
     "url": "/easeupmenu/static/media/easeupLogo.912c99b4.png"
   },
   {
-    "revision": "c203969cecd0473b6578e8c8a4fff8d6",
-    "url": "/easeupmenu/static/media/signature.c203969c.jpg"
-  },
-  {
     "revision": "b71a2fd4c38b677f714f119f89f2a212",
     "url": "/easeupmenu/static/media/oolongicedtea.b71a2fd4.jpg"
   },
@@ -32,7 +28,11 @@ self.__precacheManifest = [
     "url": "/easeupmenu/static/media/freshYuZu.21d8d50d.jpg"
   },
   {
-    "revision": "17f300dd29cfb90c85fd002b308f6d7a",
+    "revision": "0759343dddfa6b29c5e23593cbaa1f3c",
+    "url": "/easeupmenu/static/media/signature.0759343d.jpg"
+  },
+  {
+    "revision": "1ea1ab416622b7b52dcc3eadf33e0427",
     "url": "/easeupmenu/index.html"
   }
 ];
