@@ -80,7 +80,7 @@ button {
   height: 100vh;
 
   &__signature {
-    background-image: url("./img/greenTea.jpg");
+    background-image: url("./img/signature.jpg");
   }
   &__freshYuZu {
     background-image: url("./img/freshYuZu.jpg");
@@ -123,9 +123,10 @@ button {
 
 .slideHeader {
   font-size: 3vh;
-    color: #d3d3d3;
-    display: flex;
-    padding: 3vh;
-    position: absolute;
-    top: 2px;
+  color: #d3d3d3;
+  display: flex;
+  padding: 3vh;
+  position: absolute;
+  top: 2px;
+  background-color: rgba(10, 10, 10, 0.5);
 }
