@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
 import ReactFullpage from '@fullpage/react-fullpage';
-import greenTea from './img/greenTea.jpg'
 
 class App extends Component {
   onLeave(origin, destination, direction) {
@@ -29,8 +28,7 @@ class App extends Component {
               </div>
               <div className="section">
                 <div className="slide">
-                    <div className="menuItem">
-                      <img src={greenTea} alt="greenTea" />
+                    <div className="menuItem menuItem__greentea">                      
                     </div>
                 </div>
                 <div className="slide">
