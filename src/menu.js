@@ -87,6 +87,15 @@ const menu = [
     menuCss: ["menuItem", "menuItem__oolongPeace"],
     detailCss: ["item-detail", "item-detail__oolongPeace"]
   },
+  {
+    name: "Strawberry Lime Soda อู่หลงพีชไอซ์ที",
+    number : 10,
+    desc: `เนื้อสตอรี่สด ผสมกับซอสไซรัปสตอเบอรี่สูตรพิเศษ 
+    เวลาดื่มได้ความสดชื่นของน้ำและได้สัมผัสถึงเนื้อสตอเบอรี่แท้ๆ`,
+    prices: { small: 50, large: 60 },
+    menuCss: ["menuItem", "menuItem__strawberryLimeSoda"],
+    detailCss: ["item-detail", "item-detail__strawberryLimeSoda"]
+  },
 
 ];
 

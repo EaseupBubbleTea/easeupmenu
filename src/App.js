@@ -12,7 +12,7 @@ class App extends Component {
     // console.log("After load: " + destination.index);
   }
 
-    slide = (content) => {
+  slide = (content) => {
     const menuCss = content["menuCss"].join(' ')
     const additionalCss = content["detailCss"].join(' ')
     const dest = content["desc"]
@@ -23,8 +23,8 @@ class App extends Component {
     return (
       <div className="section" key={key}>
         <div className="slide">
-        <div className="slideHeader">{key} #{itemNumber}</div>     
-          <div className={menuCss}>       
+          <div className="slideHeader">{key} #{itemNumber}</div>
+          <div className={menuCss}>
           </div>
         </div>
         <div className="slide">
@@ -55,13 +55,22 @@ class App extends Component {
 
   notification = () => {
     return (
-      <div className="section">
-        <div className="slide">
-          <div className={"notification"}>
-            <p>ร้านหยุดวัน <br /> อังคาร 9 - พุธ 10 <br />เมษายน <br/>2019</p>
+      [
+        <div className="section" key="thankyouSlide">
+          <div className="slide">
+            <div className={"notification"}>
+              <p>ขอบพระคุณทุกท่านที่มาอุดหนุนค่ะ</p>
+            </div>
+          </div>
+        </div>,
+        <div className="section" key="holiday">
+          <div className="slide">
+            <div className={"notification"}>
+              <p>ร้านหยุดวัน <br /> อังคาร 9 - พุธ 10 <br />เมษายน <br />2019</p>
+            </div>
           </div>
         </div>
-      </div>
+      ]
     )
   }
 
@@ -69,7 +78,7 @@ class App extends Component {
     return (
       <ReactFullpage
         anchors={["firstPage", "secondPage", "thirdPage"]}
-        sectionsColor={["rgba(40, 44, 52, 0.3)", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34"]}
+        sectionsColor={["rgba(40, 44, 52, 0.3)", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34"]}
         // scrollOverflow={true}
         onLeave={this.onLeave.bind(this)}
         afterLoad={this.afterLoad.bind(this)}
