@@ -37,7 +37,7 @@ const menu = [
   {
     name: "Iced Matcha Latte มัทฉะลาเต้",
     number : 4,
-    desc: `มัทฉะที่ดี จะมีความขมฝาดน้อย แต่จะคงความเข้มข้นและหอมสดชื่น ของชาเขียวแท้สไตล์ญี่ปุ่น.`,
+    desc: `มัทฉะที่ดี จะมีความขมฝาดน้อย แต่จะคงความเข้มข้นและหอมสดชื่นของชาเขียวแท้สไตล์ญี่ปุ่น.`,
     prices: { small: 50, large: 60 },
     menuCss: ["menuItem", "menuItem__matchaLatte"],
     detailCss: ["item-detail", "item-detail__matchaLatte"]
@@ -90,8 +90,8 @@ const menu = [
   {
     name: "Strawberry Lime Soda อู่หลงพีชไอซ์ที",
     number : 10,
-    desc: `เนื้อสตอรี่สด ผสมกับซอสไซรัปสตอเบอรี่สูตรพิเศษ 
-    เวลาดื่มได้ความสดชื่นของน้ำและได้สัมผัสถึงเนื้อสตอเบอรี่แท้ๆ`,
+    desc: `เนื้อสตรอว์เบอร์รีสด ผสมกับซอสไซรัปสตรอว์เบอร์รีสูตรพิเศษ 
+    เวลาดื่มได้ความสดชื่นของน้ำและได้สัมผัสถึงเนื้อสตรอว์เบอร์รีแท้ๆ`,
     prices: { small: 50, large: 60 },
     menuCss: ["menuItem", "menuItem__strawberryLimeSoda"],
     detailCss: ["item-detail", "item-detail__strawberryLimeSoda"]
