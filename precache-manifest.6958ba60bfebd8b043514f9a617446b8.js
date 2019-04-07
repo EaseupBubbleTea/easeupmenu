@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "10344045c56f7abb89c2",
+    "revision": "9c1992bbb964b0a99a39",
     "url": "/easeupmenu/static/css/main.b4d56922.chunk.css"
   },
   {
-    "revision": "10344045c56f7abb89c2",
-    "url": "/easeupmenu/static/js/main.b7ad1f18.chunk.js"
+    "revision": "9c1992bbb964b0a99a39",
+    "url": "/easeupmenu/static/js/main.887bca8d.chunk.js"
   },
   {
     "revision": "b6a86cc86502cda6bd02",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/easeupmenu/static/media/greenTea.e4f3771b.jpg"
   },
   {
-    "revision": "b66c30eda94204d56f41a432d2828e64",
+    "revision": "b82a81fd67607264aa819eb808a22988",
     "url": "/easeupmenu/index.html"
   }
 ];
