@@ -31,7 +31,7 @@ class App extends Component {
       ทางร้านจึงเลือก ผลไม้ที่ตอบโจทย์ จนไปพบกับความเป็นเอกลักษณ์ของส้มยูสุ 
       ด้วยความหอมอโรม่าของส้ม บวกกับบับเบิ้ลสอดไส้น้ำลิ้นจี่ 
       จึงเป็นอีกแก้วที่พร้อมรับมือกับสงกรานต์ได้เป็นอย่างดี`,
-      prices: { small: 40, large: 50 },
+      prices: { small: 60, large: 75 },
       menuCss: ["menuItem", "menuItem__freshYuZu"],
       detailCss: ["item-detail", "item-detail__freshYuZu"]
     },
@@ -46,6 +46,38 @@ class App extends Component {
       prices: { small: 45, large: 55 },
       menuCss: ["menuItem", "menuItem__oolongIcedTea"],
       detailCss: ["item-detail", "item-detail__oolong"]
+    },
+    {
+      name: "Iced Matcha Latte มัจฉะลาเต้",
+      number : 4,
+      desc: `มัจฉะที่ดี จะมีความขมฝาดน้อย แต่จะคงความเข้มข้นและหอมสดชื่น ของชาเขียวแท้สไตล์ญี่ปุ่น.`,
+      prices: { small: 50, large: 60 },
+      menuCss: ["menuItem", "menuItem__matchaLatte"],
+      detailCss: ["item-detail", "item-detail__matchaLatte"]
+    },
+    {
+      name: "Kuromitsu Milk Tea คุโรมิสึ",
+      number : 5,
+      desc: ``,
+      prices: { small: 55, large: 65 },
+      menuCss: ["menuItem", "menuItem__kuromitsu"],
+      detailCss: ["item-detail", "item-detail__kuromitsu"]
+    },
+    {
+      name: "Elegance Matcha เอลลิแกรนซ์มัจฉะ",
+      number : 6,
+      desc: `ตีมัจฉะสดๆด้วยมือแก้วต่อแก้ว`,
+      prices: { small: 60, large: 70 },
+      menuCss: ["menuItem", "menuItem__elegantMatcha"],
+      detailCss: ["item-detail", "item-detail__elegantMatcha"]
+    },
+    {
+      name: "Dark Choco Milk Tea ดาร์กช็อคโก้",
+      number : 7,
+      desc: `สัมผัสกับความเข้มข้นเต็มรูปแบบกับ ชานม+ดาร์กช็อคโก้`,
+      prices: { small: 50, large: 60 },
+      menuCss: ["menuItem", "menuItem__darkChoco"],
+      detailCss: ["item-detail", "item-detail__darkChoco"]
     },
 
   ];

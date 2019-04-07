@@ -88,6 +88,18 @@ button {
   &__oolongIcedTea {
     background-image: url("./img/oolongicedtea.jpg");
   }
+  &__matchaLatte {
+    background-image: url("./img/matchaLatte.jpg");
+  }
+  &__kuromitsu {
+    background-image: url("./img/kuromitsu.jpg");
+  }
+  &__elegantMatcha {
+    background-image: url("./img/elegantMatcha.jpg");
+  }
+  &__darkChoco {
+    background-image: url("./img/darkChoco.jpg");
+  }
 }
 
 .item-detail {
@@ -104,6 +116,9 @@ button {
   &__oolong{
     font-size: 3vh;
   }
+  // &__matchaLatte{
+  //   font-size: 3vh;
+  // }
 }
 
 .item-price {
