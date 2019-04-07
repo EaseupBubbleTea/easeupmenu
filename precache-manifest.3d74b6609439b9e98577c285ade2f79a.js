@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "551e80fded8c7ee3ab9d",
-    "url": "/easeupmenu/static/css/main.7dc84a5c.chunk.css"
+    "revision": "5a5a1e2e754d30d32a52",
+    "url": "/easeupmenu/static/css/main.7933ee7b.chunk.css"
   },
   {
-    "revision": "551e80fded8c7ee3ab9d",
+    "revision": "5a5a1e2e754d30d32a52",
     "url": "/easeupmenu/static/js/main.33ff0d0a.chunk.js"
   },
   {
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/easeupmenu/static/media/signature.0759343d.jpg"
   },
   {
-    "revision": "1ea1ab416622b7b52dcc3eadf33e0427",
+    "revision": "90f210330c1a96293f33ebe2b2078e65",
     "url": "/easeupmenu/index.html"
   }
 ];
