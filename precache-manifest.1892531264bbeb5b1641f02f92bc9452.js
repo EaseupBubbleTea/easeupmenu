@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a28c372e5ef318197943",
-    "url": "/easeupmenu/static/css/main.c7a77991.chunk.css"
+    "revision": "2faa8ca29f5eb3e39c33",
+    "url": "/easeupmenu/static/css/main.c6f138bb.chunk.css"
   },
   {
-    "revision": "a28c372e5ef318197943",
-    "url": "/easeupmenu/static/js/main.6ead8e31.chunk.js"
+    "revision": "2faa8ca29f5eb3e39c33",
+    "url": "/easeupmenu/static/js/main.737eab16.chunk.js"
   },
   {
     "revision": "b6a86cc86502cda6bd02",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/easeupmenu/static/media/kuromitsu.7f604190.jpg"
   },
   {
-    "revision": "492ce85558f1449721dd85ab45e83cd9",
-    "url": "/easeupmenu/static/media/signature.492ce855.jpg"
-  },
-  {
     "revision": "7c91c59139c5f1ce7c1b7ce984b8ad7a",
     "url": "/easeupmenu/static/media/elegantMatcha.7c91c591.jpg"
+  },
+  {
+    "revision": "492ce85558f1449721dd85ab45e83cd9",
+    "url": "/easeupmenu/static/media/signature.492ce855.jpg"
   },
   {
     "revision": "0938c2968fae724b9ee09ff20ecb223f",
@@ -56,7 +56,11 @@ self.__precacheManifest = [
     "url": "/easeupmenu/static/media/darkChoco.5a47e4e0.jpg"
   },
   {
-    "revision": "60fb1d0fa2e6e5bc83f4e68962306deb",
+    "revision": "6717871c5dc596f71053d03b61aef91c",
+    "url": "/easeupmenu/static/media/strawberryLimeSoda.6717871c.jpg"
+  },
+  {
+    "revision": "d2ad7dc6a2a9263fb93fbc5355c921db",
     "url": "/easeupmenu/index.html"
   }
 ];
