@@ -1,12 +1,52 @@
-body {
-  font-family: arial, helvetica;
+:root{
+  box-sizing: border-box;
+  cursor: default;
+  color: #333;
 }
 
-h3 {
-  font-size: 5em;
+*,
+::after,
+::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+body {
+
+  font-size: .875em;
+  font-family: 'Source Code Pro', monospace, sans-serif;
+  font-weight: 400;
+  box-sizing: inherit;
+}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+}
+
+.App {
   text-align: center;
-  color: #fff;
-  font-weight: 700;
+  display: grid;
+  grid-template-rows:  repeat(5,  1fr);
+  width: 95vw;
+  height: 100vh;
+  align-items: center;
+  padding: 1rem;
+  background-color: ghostwhite;
+  box-shadow: 0px 0px 15px 1px rgba(100,100,100,.3);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 5.9vw;
+}
+h2 {
+  font-size: 3.0vh;
+}
+p {
+  font-size: 2vmin;
 }
 
 #section1 {
@@ -39,4 +79,30 @@ button {
   &__greentea {
     background-image: url("./img/greenTea.jpg");
   }
+}
+
+
+.item-detail{
+
+  &__signature{
+    font-size: 5vh;
+    color: #d3d3d3;
+    padding: 6vh;
+  }
+}
+
+.item-price{
+
+  h1{
+    font-size: 10vh;
+    color: #d3d3d3;
+    padding: 6vh;
+  }
+  p{
+    font-size: 5vh;
+    color: #d3d3d3;
+    padding: 6vh;
+  }
+
+ 
 }
