@@ -9,6 +9,89 @@ class App extends Component {
   afterLoad(origin, destination, direction) {
     // console.log("After load: " + destination.index);
   }
+
+  contents = [
+    {
+      name: "signature",
+      desc: "เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา\
+    จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน\
+    นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp\
+    จนได้ชานมคุณภาพอย่างที่เราภูมิใจ",
+      prices: { small: 40 , large: 50 },
+      menuCss: ["menuItem", "menuItem__greentea"],
+      detailCss: ["item-detail", "item-detail__signature"]
+    },
+    {
+      name: "signature",
+      desc: "เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา\
+    จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน\
+    นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp\
+    จนได้ชานมคุณภาพอย่างที่เราภูมิใจ",
+      prices: { small: 40 , large: 50 },
+      menuCss: ["menuItem", "menuItem__greentea"],
+      detailCss: ["item-detail", "item-detail__signature"]
+    },
+    {
+      name: "signature",
+      desc: "เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา\
+    จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน\
+    นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp\
+    จนได้ชานมคุณภาพอย่างที่เราภูมิใจ",
+      prices: { small: 40 , large: 50 },
+      menuCss: ["menuItem", "menuItem__greentea"],
+      detailCss: ["item-detail", "item-detail__signature"]
+    },
+    {
+      name: "signature",
+      desc: "เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา\
+    จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน\
+    นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp\
+    จนได้ชานมคุณภาพอย่างที่เราภูมิใจ",
+      prices: { small: 40 , large: 50 },
+      menuCss: ["menuItem", "menuItem__greentea"],
+      detailCss: ["item-detail", "item-detail__signature"]
+    },
+
+  ];
+
+  slide = (content) => {
+    const menuCss = content["menuCss"].join(' ')
+    const additionalCss = content["detailCss"].join(' ')
+    const dest = content["desc"]
+    const priceSmall = content["prices"]["small"]
+    const priceLarge = content["prices"]["large"]
+    return (
+      <div className="section">
+        <div className="slide">
+          <div className={menuCss}>
+          </div>
+        </div>
+        <div className="slide">
+          <div className="item-detail">
+            <p className={additionalCss}>
+              {dest}
+            </p>
+          </div>
+        </div>
+        <div className="slide">
+          <div className="item-price">
+            <h1>ราคา</h1>
+            <p>เล็ก {priceSmall} บาท</p>
+            <p>ใหญ่ {priceLarge} บาท</p>
+          </div>
+        </div>
+      </div>)
+  }
+  slides = () => {
+    let menus = []
+    this.contents.forEach((x) => {
+      menus.push(this.slide(x));
+    })
+    return menus
+  }
+
+
+
   render() {
     return (
       <ReactFullpage
@@ -26,39 +109,7 @@ class App extends Component {
                   Move down
                 </button>
               </div>
-              <div className="section">
-                <div className="slide">
-                  <div className="menuItem menuItem__greentea">
-                  </div>
-                </div>
-                <div className="slide">
-                  <div className="item-detail">
-                    <p className="item-detail item-detail__signature">
-                      เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา
-                      จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน
-                      นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp
-                      จนได้ชานมคุณภาพอย่างที่เราภูมิใจ
-                    </p>
-                  </div>
-                </div>
-                <div className="slide">
-                  <div className="item-price">
-                    <h1>ราคา</h1>
-                    <p>เล็ก 40 บาท</p>
-                    <p>ใหญ่ 50 บาท</p>
-                  </div>
-                </div>
-              </div>
-              <div className="section">
-                <div className="slide">
-                  <h3>ชาเผือก</h3>
-                </div>
-                <div className="slide">
-                  <h3>ราคา</h3>
-                  <h2>เล็ก 40</h2>
-                  <h2>กลาง 50</h2>
-                </div>
-              </div>
+              {this.slides()}
             </div>
           );
         }}
