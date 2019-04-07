@@ -45,7 +45,7 @@ const menu = [
   {
     name: "Kuromitsu Milk Tea คุโรมิสึ",
     number : 5,
-    desc: `คุโระมิทสึ`,
+    desc: `หรือ น้ำผึ้งดำ ทำมาจากน้ำตาลอ้อยแห่งเกาะโอกินาว่า ญี่ปุ่น โดยการเคี่ยวน้ำตาลกับน้ำจนงวด`,
     prices: { small: 55, large: 65 },
     menuCss: ["menuItem", "menuItem__kuromitsu"],
     detailCss: ["item-detail", "item-detail__kuromitsu"]
@@ -53,7 +53,7 @@ const menu = [
   {
     name: "Elegance Matcha เอลลิแกรนซ์มัทฉะ",
     number : 6,
-    desc: `ตีมัทฉะสดๆด้วยมือแก้วต่อแก้ว`,
+    desc: `มัทฉะแท้ ตีกับนมโคสดด้วยมือแบบแก้วต่อแก้วสุดเข้มข้น ราดลงไปบนนมโคสดอย่างดี.`,
     prices: { small: 60, large: 70 },
     menuCss: ["menuItem", "menuItem__elegantMatcha"],
     detailCss: ["item-detail", "item-detail__elegantMatcha"]
@@ -61,10 +61,31 @@ const menu = [
   {
     name: "Dark Choco Milk Tea ดาร์กช็อคโก้",
     number : 7,
-    desc: `สัมผัสกับความเข้มข้นเต็มรูปแบบกับ ชานม+ดาร์กช็อคโก้`,
+    desc: `สัมผัสกับความเข้มข้นเต็มรูปแบบกับ กับช็อคโกแลตแท้ถึง 3 ชนิด`,
     prices: { small: 50, large: 60 },
     menuCss: ["menuItem", "menuItem__darkChoco"],
     detailCss: ["item-detail", "item-detail__darkChoco"]
+  },
+  {
+    name: "Peach Tea พีชไอซ์ที",
+    number : 8,
+    desc: `(ไม่มีคาเฟอีน) ลูกพีชคุณประโยชน์มากมาย มีทั้งวิตามินเอที่ช่วยบำรุงสายตา
+     มีวิตามินซีป้องกันโรคหวัด และโรคเลือดออกตามไรฟัน 
+     ให้แร่ธาตุแคลเซียมและฟอสฟอรัสช่วยเสริมสร้างกระดูกและฟัน 
+     ทั้งยังแก้โรคหอบหืด หล่อลื่นลำไส้`,
+    prices: { small: 60, large: 70 },
+    menuCss: ["menuItem", "menuItem__peachTea"],
+    detailCss: ["item-detail", "item-detail__peachTea"]
+  },
+  {
+    name: "Oolong Peach Tea อู่หลงพีชไอซ์ที",
+    number : 9,
+    desc: `ด้วยความหอมของลูกพีช 
+    บวกกับความหอมสดชื่นของชาอู่หลงก้านอ่อนอบผสมดอกหอมหมื่นลี้จากประเทศไต้หวัน 
+    ทำให้ความรู้สึกผ่อนคลายเหมือนได้พักผ่อนกลางธรรมชาติ`,
+    prices: { small: 60, large: 70 },
+    menuCss: ["menuItem", "menuItem__oolongPeace"],
+    detailCss: ["item-detail", "item-detail__oolongPeace"]
   },
 
 ];

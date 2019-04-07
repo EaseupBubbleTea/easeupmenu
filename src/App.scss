@@ -100,6 +100,12 @@ button {
   &__darkChoco {
     background-image: url("./img/darkChoco.jpg");
   }
+  &__peachTea {
+    background-image: url("./img/peachTea.jpg");
+  }
+  &__oolongPeace {
+    background-image: url("./img/oolongPeace.jpg");
+  }
 }
 
 .item-detail {
@@ -112,6 +118,9 @@ button {
 
   &__freshYuZu {
 
+  }
+  &__darkChoco {
+    font-size: 5vh;
   }
   &__oolong{
     font-size: 3vh;
