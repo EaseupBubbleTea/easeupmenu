@@ -13,42 +13,46 @@ class App extends Component {
 
   contents = [
     {
-      name: "signature",
+      name: "Signature ชานมไข่มุกต้นตำหรับ",
+      number : 1,
       desc: `เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา
     จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน
     นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp
     จนได้ชานมคุณภาพอย่างที่เราภูมิใจ`,
-      prices: { small: 40 , large: 50 },
-      menuCss: ["menuItem", "menuItem__greentea"],
+      prices: { small: 40, large: 50 },
+      menuCss: ["menuItem", "menuItem__signature"],
       detailCss: ["item-detail", "item-detail__signature"]
     },
     {
-      name: "signature",
+      name: "FreshYuZu เฟรชยูสุ",
+      number : 2,
       desc: `เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา\
     จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน\
     นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp\
     จนได้ชานมคุณภาพอย่างที่เราภูมิใจ`,
-      prices: { small: 40 , large: 50 },
-      menuCss: ["menuItem", "menuItem__greentea"],
-      detailCss: ["item-detail", "item-detail__signature"]
+      prices: { small: 40, large: 50 },
+      menuCss: ["menuItem", "menuItem__freshYuZu"],
+      detailCss: ["item-detail", "item-detail__freshYuZu"]
     },
     {
-      name: "signature",
+      name: "signature1",
+      number : 3,
       desc: `เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา\
     จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน\
     นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp\
     จนได้ชานมคุณภาพอย่างที่เราภูมิใจ`,
-      prices: { small: 40 , large: 50 },
+      prices: { small: 40, large: 50 },
       menuCss: ["menuItem", "menuItem__greentea"],
       detailCss: ["item-detail", "item-detail__signature"]
     },
     {
-      name: "signature",
+      name: "signature2",
+      number : 4,
       desc: `เพราะรสชาดและคุณภาพคือเรื่องสำคัญสูงสุดสำหรับเรา\
     จึงเป็นจุดเริ่มต้นของการเดินทางสรรหาวัตถุดิบถึงต้นตำหรับที่ไถหนาน ไต้หวัน\
     นำมาผสานกับประสบการณ์เฉพาะในแบบฉบับของ EaseUp\
     จนได้ชานมคุณภาพอย่างที่เราภูมิใจ`,
-      prices: { small: 40 , large: 50 },
+      prices: { small: 40, large: 50 },
       menuCss: ["menuItem", "menuItem__greentea"],
       detailCss: ["item-detail", "item-detail__signature"]
     },
@@ -61,13 +65,18 @@ class App extends Component {
     const dest = content["desc"]
     const priceSmall = content["prices"]["small"]
     const priceLarge = content["prices"]["large"]
+    const key = content["name"]
+    const itemNumber = content["number"]
     return (
-      <div className="section">
+      <div className="section" key={key}>
         <div className="slide">
           <div className={menuCss}>
+            <div className="slideHeader">{key} #{itemNumber}</div>
+            
           </div>
         </div>
         <div className="slide">
+          <div className="slideHeader">{key} #{itemNumber}</div>
           <div className="item-detail">
             <p className={additionalCss}>
               {dest}
@@ -75,6 +84,7 @@ class App extends Component {
           </div>
         </div>
         <div className="slide">
+          <div className="slideHeader">{key} #{itemNumber}</div>
           <div className="item-price">
             <h1>ราคา</h1>
             <p>เล็ก {priceSmall} บาท</p>
@@ -89,6 +99,18 @@ class App extends Component {
       menus.push(this.slide(x));
     })
     return menus
+  }
+
+  notification = () => {
+    return (
+      <div className="section">
+        <div className="slide">
+          <div className={"notification"}>
+            <p>ร้านหยุดวัน <br /> อังคาร 2 - พุธ 10 <br />เมษายน <br/>2019</p>
+          </div>
+        </div>
+      </div>
+    )
   }
 
 
@@ -107,10 +129,11 @@ class App extends Component {
               <div className="section section1 welcome">
                 <img src={easeupLogo} alt="EaseUp" ></img>
                 <button onClick={() => fullpageApi.moveSectionDown()}>
-                  Move down
+                  เลื่อนลง
                 </button>
               </div>
               {this.slides()}
+              {this.notification()}
             </div>
           );
         }}
