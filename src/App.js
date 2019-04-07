@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import ReactFullpage from '@fullpage/react-fullpage';
+import easeupLogo from './img/easeupLogo.png'
 
 class App extends Component {
   onLeave(origin, destination, direction) {
@@ -96,15 +97,15 @@ class App extends Component {
     return (
       <ReactFullpage
         anchors={["firstPage", "secondPage", "thirdPage"]}
-        sectionsColor={["#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34"]}
+        sectionsColor={["rgba(40, 44, 52, 0.3)", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34"]}
         // scrollOverflow={true}
         onLeave={this.onLeave.bind(this)}
         afterLoad={this.afterLoad.bind(this)}
         render={({ state, fullpageApi }) => {
           return (
             <div id="fullpage-wrapper">
-              <div className="section section1">
-                <h3>Easeup</h3>
+              <div className="section section1 welcome">
+                <img src={easeupLogo} alt="EaseUp" ></img>
                 <button onClick={() => fullpageApi.moveSectionDown()}>
                   Move down
                 </button>
