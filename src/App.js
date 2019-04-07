@@ -91,6 +91,13 @@ class App extends Component {
                   เลื่อนลง
                 </button>
               </div>
+              <div className="section" key="holiday">
+                <div className="slide">
+                  <div className={"notification"}>
+                    <p>เลื่อนขึ้นลงเพื่อดูเมนู <br/><br/>เลื่อนซ้ายขวา <br/>ดูรายละเอียดและราคาค่ะ</p>
+                  </div>
+                </div>
+              </div>
               {this.slides()}
               {this.notification()}
             </div>
