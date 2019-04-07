@@ -1,5 +1,5 @@
 {
-  "main.css": "/easeupmenu/static/css/main.30bca581.chunk.css",
+  "main.css": "/easeupmenu/static/css/main.73212fa7.chunk.css",
   "main.js": "/easeupmenu/static/js/main.fe139853.chunk.js",
   "main.js.map": "/easeupmenu/static/js/main.fe139853.chunk.js.map",
   "runtime~main.js": "/easeupmenu/static/js/runtime~main.08ecad9b.js",
@@ -7,8 +7,8 @@
   "static/js/2.dbcac54c.chunk.js": "/easeupmenu/static/js/2.dbcac54c.chunk.js",
   "static/js/2.dbcac54c.chunk.js.map": "/easeupmenu/static/js/2.dbcac54c.chunk.js.map",
   "index.html": "/easeupmenu/index.html",
-  "precache-manifest.a7490d863923ae5f3654a7b32f181571.js": "/easeupmenu/precache-manifest.a7490d863923ae5f3654a7b32f181571.js",
+  "precache-manifest.7c2cedb17d56da34773208d5e31f9cc6.js": "/easeupmenu/precache-manifest.7c2cedb17d56da34773208d5e31f9cc6.js",
   "service-worker.js": "/easeupmenu/service-worker.js",
-  "static/css/main.30bca581.chunk.css.map": "/easeupmenu/static/css/main.30bca581.chunk.css.map",
+  "static/css/main.73212fa7.chunk.css.map": "/easeupmenu/static/css/main.73212fa7.chunk.css.map",
   "static/media/App.scss": "/easeupmenu/static/media/greenTea.e4f3771b.jpg"
 }
