@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "7ae9ab330d77fefcf976",
-    "url": "/easeupmenu/static/css/main.c6f138bb.chunk.css"
+    "revision": "d003c7776fa5b998204f",
+    "url": "/easeupmenu/static/css/main.99f954bc.chunk.css"
   },
   {
-    "revision": "7ae9ab330d77fefcf976",
-    "url": "/easeupmenu/static/js/main.84703a58.chunk.js"
+    "revision": "d003c7776fa5b998204f",
+    "url": "/easeupmenu/static/js/main.ccfea630.chunk.js"
   },
   {
     "revision": "b6a86cc86502cda6bd02",
     "url": "/easeupmenu/static/js/runtime~main.08ecad9b.js"
   },
   {
-    "revision": "ae21bcc2cfad369c4a23",
-    "url": "/easeupmenu/static/js/2.29b6d933.chunk.js"
+    "revision": "2968378824a634011af2",
+    "url": "/easeupmenu/static/js/2.93c27a9f.chunk.js"
   },
   {
     "revision": "912c99b497f108d2d55fae4255529e30",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/easeupmenu/static/media/strawberryLimeSoda.6717871c.jpg"
   },
   {
-    "revision": "c3023455c1b0071f839b03ab5501cd9f",
+    "revision": "4fce1f82a6b07fdf46f3eb5c7bb5a77d",
     "url": "/easeupmenu/index.html"
   }
 ];
