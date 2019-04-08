@@ -42,8 +42,8 @@ class App extends Component {
           <div className="slideHeader">{key} #{itemNumber}</div>
           <div className="item-price">
             <p><b>ราคา</b></p>
-            <p>เล็ก {priceSmall} บาท<br/><span>(16 ออนซ์)</span></p>
-            <p>ใหญ่ {priceLarge} บาท<br/><span>(20 ออนซ์)</span></p>
+            <p>เล็ก {priceSmall} บาท<br /><span>(16 ออนซ์)</span></p>
+            <p>ใหญ่ {priceLarge} บาท<br /><span>(20 ออนซ์)</span></p>
           </div>
         </div>
       </div>)
@@ -81,7 +81,25 @@ class App extends Component {
     return (
       <ReactFullpage
         anchors={["firstPage", "secondPage", "thirdPage"]}
-        sectionsColor={["rgba(40, 44, 52, 0.3)","rgba(40, 44, 52, 0.3)", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34", "#282c34"]}
+        sectionsColor={["rgba(40, 44, 52, 0.3)",
+          "rgba(40, 44, 52, 0.3)",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34",
+          "#282c34"]}
         // scrollOverflow={true}
         onLeave={this.onLeave.bind(this)}
         afterLoad={this.afterLoad.bind(this)}
@@ -100,8 +118,8 @@ class App extends Component {
                     <div><img src={handUpAndDown} alt="เลื่อขึ้นลง" /></div>
                     <div className="usage__leftArrow"><img src={leftArrow} alt="<-" /></div>
                     <div>ดูเมนู</div>
-                    <div><img src={handLeftRight} alt="เลื่อนซ้ายขวา"/></div>
-                    <div className="usage__leftArrow"><img src={leftArrow} alt="<-"/></div>
+                    <div><img src={handLeftRight} alt="เลื่อนซ้ายขวา" /></div>
+                    <div className="usage__leftArrow"><img src={leftArrow} alt="<-" /></div>
                     <div>ดูราคา</div>
                   </div>
                 </div>

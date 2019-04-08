@@ -96,6 +96,14 @@ const menu = [
     menuCss: ["menuItem", "menuItem__strawberryLimeSoda"],
     detailCss: ["item-detail", "item-detail__strawberryLimeSoda"]
   },
+  {
+    name: "Milo Magma ไมโลแมกม่า",
+    number : 11,
+    desc: `ซอสช็อคโกแลตบัตเตอร์เข้มข้น  ราดลงบนไมโลหอมๆ เข้ากันอย่างลงตัว สำหรับคนที่คลั่งไคล้ช้อคโกแลต ไม่ควรพลาด`,
+    prices: { small: 50, large: 60 },
+    menuCss: ["menuItem", "menuItem__miloMagma"],
+    detailCss: ["item-detail", "item-detail__miloMagma"]
+  },
 
 ];
 
