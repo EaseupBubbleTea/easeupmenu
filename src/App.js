@@ -69,8 +69,8 @@ class App extends Component {
         <div className="section" key="thankyouSlide">
           <div className="slide">
             <div className={"notification"}>
-              <p>ขอบพระคุณทุกท่านที่มาอุดหนุนค่ะ<br/><br/>0970931666</p>
-              <p>แนะนำติชมทางร้านแบบไม่เปิดเผยตัวตน</p><br/><br/>
+              <p>ขอบพระคุณทุกท่านที่มาอุดหนุนค่ะ<br /><br />0970931666</p>
+              <p>แนะนำติชมทางร้านแบบไม่เปิดเผยตัวตน</p><br /><br />
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhrP3_LibZvuPd-Q_t12lISio4kzllkPgzBd_vGkf7FwBURA/viewform?usp=sf_link">กดเพื่อคอมเมนต์</a>
 
             </div>
@@ -116,16 +116,22 @@ class App extends Component {
                 </button>
               </div>
               <div className="section" key="appusage">
-                <div className="slide">
-                  <div className={"usage"}>
-                    <div><img src={handUpAndDown} alt="เลื่อขึ้นลง" /></div>
-                    <div className="usage__leftArrow"><img src={leftArrow} alt="<-" /></div>
-                    <div>ดูเมนู</div>
-                    <div><img src={handLeftRight} alt="เลื่อนซ้ายขวา" /></div>
-                    <div className="usage__leftArrow"><img src={leftArrow} alt="<-" /></div>
-                    <div>ดูราคา</div>
-                  </div>
+                {/* <div className="slide"> */}
+                <div className={"usage"}>
+                  <div><img src={handUpAndDown} alt="เลื่อขึ้นลง" /></div>
+                  <div className="usage__leftArrow"><img src={leftArrow} alt="<-" /></div>
+                  <div>ดูเมนู</div>
+                  <div><img src={handLeftRight} alt="เลื่อนซ้ายขวา" /></div>
+                  <div className="usage__leftArrow"><img src={leftArrow} alt="<-" /></div>
+                  <div>ดูราคา</div>
+                  <button style={{
+                    gridArea: "3 / 1 / span 1 / span 3"
+                  }} onClick={() => fullpageApi.moveSectionDown()}>
+                    กรุณาเลื่อนลงเพื่อชมเมนูค่ะ
+                    </button>
                 </div>
+
+                {/* </div> */}
               </div>
               {this.slides()}
               {this.notification()}
