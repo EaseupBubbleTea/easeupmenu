@@ -166,8 +166,8 @@ button {
   align-items: center;
   &__leftArrow{
     img{
-      width: 50%
-
+      width: 50%;
+      filter: opacity(.5) drop-shadow(0 0 0 lightGray);
     }
   }
 
