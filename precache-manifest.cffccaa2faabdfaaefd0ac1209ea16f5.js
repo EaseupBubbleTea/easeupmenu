@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a48cdea7a508b7082a8e",
-    "url": "/easeupmenu/static/css/main.c671c571.chunk.css"
+    "revision": "af610e82ab61bb544949",
+    "url": "/easeupmenu/static/css/main.7f9b9a8b.chunk.css"
   },
   {
-    "revision": "a48cdea7a508b7082a8e",
-    "url": "/easeupmenu/static/js/main.ccfea630.chunk.js"
+    "revision": "af610e82ab61bb544949",
+    "url": "/easeupmenu/static/js/main.c0292f7c.chunk.js"
   },
   {
     "revision": "b6a86cc86502cda6bd02",
@@ -30,6 +30,10 @@ self.__precacheManifest = [
   {
     "revision": "7c91c59139c5f1ce7c1b7ce984b8ad7a",
     "url": "/easeupmenu/static/media/elegantMatcha.7c91c591.jpg"
+  },
+  {
+    "revision": "dc58be5e08cfa935910a0e7fc7bc1eea",
+    "url": "/easeupmenu/static/media/MiloLava.dc58be5e.jpg"
   },
   {
     "revision": "0938c2968fae724b9ee09ff20ecb223f",
@@ -60,7 +64,7 @@ self.__precacheManifest = [
     "url": "/easeupmenu/static/media/strawberryLimeSoda.6717871c.jpg"
   },
   {
-    "revision": "9ab9b8c7a82ac7c0db95b48b7c1f7b20",
+    "revision": "e71ef4a740023d7950742d8c8eafd4d5",
     "url": "/easeupmenu/index.html"
   }
 ];
