@@ -121,6 +121,7 @@ class App extends Component {
     return (
       <ReactFullpage
         anchors={['firstPage', 'secondPage', 'thirdPage']}
+        navigation
         sectionsColor={sectionColor}
         onLeave={this.onLeave.bind(this)}
         afterLoad={this.afterLoad.bind(this)}
