@@ -1,15 +1,15 @@
 {
-  "main.css": "/easeupmenu/static/css/main.1bc2873c.chunk.css",
-  "main.js": "/easeupmenu/static/js/main.aecd8414.chunk.js",
-  "main.js.map": "/easeupmenu/static/js/main.aecd8414.chunk.js.map",
+  "main.css": "/easeupmenu/static/css/main.0c226c88.chunk.css",
+  "main.js": "/easeupmenu/static/js/main.b34c5946.chunk.js",
+  "main.js.map": "/easeupmenu/static/js/main.b34c5946.chunk.js.map",
   "runtime~main.js": "/easeupmenu/static/js/runtime~main.08ecad9b.js",
   "runtime~main.js.map": "/easeupmenu/static/js/runtime~main.08ecad9b.js.map",
   "static/js/2.cfe198b0.chunk.js": "/easeupmenu/static/js/2.cfe198b0.chunk.js",
   "static/js/2.cfe198b0.chunk.js.map": "/easeupmenu/static/js/2.cfe198b0.chunk.js.map",
   "index.html": "/easeupmenu/index.html",
-  "precache-manifest.0bf3ce538cecbd48b29afe4b5181ecd9.js": "/easeupmenu/precache-manifest.0bf3ce538cecbd48b29afe4b5181ecd9.js",
+  "precache-manifest.f101cdcc21ae35643736c9c8ff82dd63.js": "/easeupmenu/precache-manifest.f101cdcc21ae35643736c9c8ff82dd63.js",
   "service-worker.js": "/easeupmenu/service-worker.js",
-  "static/css/main.1bc2873c.chunk.css.map": "/easeupmenu/static/css/main.1bc2873c.chunk.css.map",
+  "static/css/main.0c226c88.chunk.css.map": "/easeupmenu/static/css/main.0c226c88.chunk.css.map",
   "static/media/easeupLogo.png": "/easeupmenu/static/media/easeupLogo.912c99b4.png",
   "static/media/preload2.svg": "/easeupmenu/static/media/preload2.65de54d0.svg"
 }
