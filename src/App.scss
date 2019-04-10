@@ -14,7 +14,7 @@
 
 body {
   font-size: 0.875em;
-  font-family: "Source Code Pro", monospace, sans-serif;
+  font-family: 'Source Code Pro', monospace, sans-serif;
   font-weight: 400;
   box-sizing: inherit;
 }
@@ -78,44 +78,6 @@ button {
   background-size: cover;
   width: 100vw;
   height: 100vh;
-
-  // &__spining{
-  //   background-image: url("./img/preloader.svg")
-  // }
-
-  &__signature {
-    background-image: url("./img/signature.jpg");
-  }
-  &__freshYuZu {
-    background-image: url("./img/freshYuZu.jpg");
-  }
-  &__oolongIcedTea {
-    background-image: url("./img/oolongicedtea.jpg");
-  }
-  &__matchaLatte {
-    background-image: url("./img/matchaLatte.jpg");
-  }
-  &__kuromitsu {
-    background-image: url("./img/kuromitsu.jpg");
-  }
-  &__elegantMatcha {
-    background-image: url("./img/elegantMatcha.jpg");
-  }
-  &__darkChoco {
-    background-image: url("./img/darkChoco.jpg");
-  }
-  &__peachTea {
-    background-image: url("./img/peachTea.jpg");
-  }
-  &__oolongPeace {
-    background-image: url("./img/oolongPeace.jpg");
-  }
-  &__strawberryLimeSoda {
-    background-image: url("./img/strawberryLimeSoda.jpg");
-  }
-  &__miloMagma {
-    background-image: url("./img/MiloLava.jpg");
-  }
 }
 
 .item-detail {
@@ -127,12 +89,11 @@ button {
   }
 
   &__freshYuZu {
-
   }
   &__darkChoco {
     font-size: 5vh;
   }
-  &__oolong{
+  &__oolong {
     font-size: 3vh;
   }
   // &__matchaLatte{
@@ -151,7 +112,7 @@ button {
     font-size: 5vh;
     padding: 6vh;
 
-    span{
+    span {
       font-size: 3vh;
     }
   }
@@ -161,7 +122,7 @@ button {
   font-size: 5vh;
   color: #d3d3d3;
   padding: 6vh;
-  a{
+  a {
     color: #d3d3d3;
   }
 }
@@ -174,13 +135,12 @@ button {
   grid-template-columns: 2fr 1fr 2fr;
   height: 100vh;
   align-items: center;
-  &__leftArrow{
-    img{
+  &__leftArrow {
+    img {
       width: 50%;
-      filter: opacity(.5) drop-shadow(0 0 0 lightGray);
+      filter: opacity(0.5) drop-shadow(0 0 0 lightGray);
     }
   }
-
 }
 
 .slideHeader {
@@ -191,4 +151,33 @@ button {
   position: absolute;
   top: 2px;
   background-color: rgba(10, 10, 10, 0.5);
+}
+
+.fp-controlArrow {
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  margin-top: -38px;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.fp-controlArrow.fp-prev {
+  left: 1vw;
+  width: 0;
+  border-width: 9vw 7vw 9vw 0;
+  border-color: transparent rgba(226, 223, 223, 0.55) transparent transparent;
+}
+.fp-controlArrow.fp-next {
+  right: 1vw;
+  border-width: 9vw 0 9vw 7vw;
+  border-color: transparent transparent transparent rgba(226, 223, 223, 0.55);
 }

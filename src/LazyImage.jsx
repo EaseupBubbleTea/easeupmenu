@@ -77,6 +77,7 @@ class LazyImage extends Component {
             className={className}
             style={{
               backgroundImage: `url(${window.location.origin + easeUpLogo})`,
+              backgroundSize: 'contain'
             }}
           />
         );
