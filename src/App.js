@@ -31,7 +31,7 @@ class App extends Component {
         <div className="slide">
           <div className="slideHeader">{key} #{itemNumber}</div>
           {/*<div className={menuCss}></div>*/}
-          <LazyImage className={"menuItem"} svgPlaceHolder={placeHolder} srcUrls={srcUrls} alt={"somePic"}/>
+          <LazyImage className={"menuItem"} svgPlaceHolder={placeHolder} srcUrls={srcUrls}/>
         </div>
         <div className="slide">
           <div className="slideHeader">{key} #{itemNumber}</div>

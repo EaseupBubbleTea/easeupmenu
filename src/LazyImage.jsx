@@ -49,7 +49,7 @@ class LazyImage extends Component {
   }
   //   'menuItem', 'menuItem__signature'
   render() {
-    const { className, svgPlaceHolder, alt } = this.props;
+    const { className, svgPlaceHolder } = this.props;
 
     if(this.state.loadedLarge){
         return (
