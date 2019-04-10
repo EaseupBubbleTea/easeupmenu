@@ -6,6 +6,8 @@ import menu from './menu'
 import handUpAndDown from './img/001-finger_upAndDown.png'
 import handLeftRight from "./img/002-finger_leftAndRight.png"
 import leftArrow from "./img/four-dots-horizontally-aligned-as-a-line.png"
+import LazyImage from "./LazyImage";
+import placeHolder from "./img/preload2.svg"
 
 class App extends Component {
   onLeave(origin, destination, direction) {
@@ -16,7 +18,8 @@ class App extends Component {
   }
 
   slide = (content) => {
-    const menuCss = content["menuCss"].join(' ')
+    // const menuCss = content["menuCss"].join(' ')
+    const srcUrls = content["srcUrls"]
     const additionalCss = content["detailCss"].join(' ')
     const dest = content["desc"]
     const priceSmall = content["prices"]["small"]
@@ -27,8 +30,8 @@ class App extends Component {
       <div className="section" key={key}>
         <div className="slide">
           <div className="slideHeader">{key} #{itemNumber}</div>
-          <div className={menuCss}>
-          </div>
+          {/*<div className={menuCss}></div>*/}
+          <LazyImage className={"menuItem"} svgPlaceHolder={placeHolder} srcUrls={srcUrls} alt={"somePic"}/>
         </div>
         <div className="slide">
           <div className="slideHeader">{key} #{itemNumber}</div>
