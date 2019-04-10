@@ -1,15 +1,15 @@
 {
-  "main.css": "/easeupmenu/static/css/main.5fbe29d4.chunk.css",
-  "main.js": "/easeupmenu/static/js/main.16affbf3.chunk.js",
-  "main.js.map": "/easeupmenu/static/js/main.16affbf3.chunk.js.map",
+  "main.css": "/easeupmenu/static/css/main.1bc2873c.chunk.css",
+  "main.js": "/easeupmenu/static/js/main.25fed73b.chunk.js",
+  "main.js.map": "/easeupmenu/static/js/main.25fed73b.chunk.js.map",
   "runtime~main.js": "/easeupmenu/static/js/runtime~main.08ecad9b.js",
   "runtime~main.js.map": "/easeupmenu/static/js/runtime~main.08ecad9b.js.map",
-  "static/js/2.93c27a9f.chunk.js": "/easeupmenu/static/js/2.93c27a9f.chunk.js",
-  "static/js/2.93c27a9f.chunk.js.map": "/easeupmenu/static/js/2.93c27a9f.chunk.js.map",
+  "static/js/2.cfe198b0.chunk.js": "/easeupmenu/static/js/2.cfe198b0.chunk.js",
+  "static/js/2.cfe198b0.chunk.js.map": "/easeupmenu/static/js/2.cfe198b0.chunk.js.map",
   "index.html": "/easeupmenu/index.html",
-  "precache-manifest.79638644bb8e370168642252f21e944c.js": "/easeupmenu/precache-manifest.79638644bb8e370168642252f21e944c.js",
+  "precache-manifest.df0854e7d7eb0ebfc8f78196832c32bd.js": "/easeupmenu/precache-manifest.df0854e7d7eb0ebfc8f78196832c32bd.js",
   "service-worker.js": "/easeupmenu/service-worker.js",
-  "static/css/main.5fbe29d4.chunk.css.map": "/easeupmenu/static/css/main.5fbe29d4.chunk.css.map",
-  "static/media/App.scss": "/easeupmenu/static/media/strawberryLimeSoda.6717871c.jpg",
-  "static/media/easeupLogo.png": "/easeupmenu/static/media/easeupLogo.912c99b4.png"
+  "static/css/main.1bc2873c.chunk.css.map": "/easeupmenu/static/css/main.1bc2873c.chunk.css.map",
+  "static/media/easeupLogo.png": "/easeupmenu/static/media/easeupLogo.912c99b4.png",
+  "static/media/preload2.svg": "/easeupmenu/static/media/preload2.65de54d0.svg"
 }
