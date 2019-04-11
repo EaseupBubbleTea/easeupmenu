@@ -10,6 +10,13 @@ import placeHolder from './img/preload2.svg';
 import './App.scss';
 
 class App extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = {
+      lang : "th"
+    }
+  }
   onLeave(origin, destination, direction) {
     // console.log("Leaving section " + origin.index);
   }
@@ -21,10 +28,10 @@ class App extends Component {
     // const menuCss = content["menuCss"].join(' ')
     const srcUrls = content['srcUrls'];
     const additionalCss = content['detailCss'].join(' ');
-    const dest = content['desc'];
+    const dest =  this.state.lang === "th"? content['desc']["th"] : content['desc']["eng"];
     const priceSmall = content['prices']['small'];
     const priceLarge = content['prices']['large'];
-    const key = content['name'];
+    const key = this.state.lang === "th" ? content['name']["th"] : content['name']["eng"];
     const itemNumber = content['number'];
     return (
       <div className="section" key={key}>
@@ -53,15 +60,17 @@ class App extends Component {
           </div>
           <div className="item-price">
             <p>
-              <b>ราคา</b>
+              <b>{key}</b><br/>
+              (เมนูที่ {itemNumber})
             </p>
+        
             <p>
-              เล็ก {priceSmall} บาท
+              แก้วเล็ก {priceSmall} บาท
               <br />
               <span>(16 ออนซ์)</span>
             </p>
             <p>
-              ใหญ่ {priceLarge} บาท
+              แก้วใหญ่ {priceLarge} บาท
               <br />
               <span>(20 ออนซ์)</span>
             </p>
@@ -136,6 +145,8 @@ class App extends Component {
                 <button onClick={() => fullpageApi.moveSectionDown()}>
                   เลื่อนลง
                 </button>
+                <button>Thai</button>
+                <button>English</button>
               </div>
               <div className="section" key="appusage">
                 {/* <div className="slide"> */}
