@@ -10,12 +10,11 @@ import placeHolder from './img/preload2.svg';
 import './App.scss';
 
 class App extends Component {
-
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      lang : "th"
-    }
+      lang: 'th'
+    };
   }
   onLeave(origin, destination, direction) {
     // console.log("Leaving section " + origin.index);
@@ -28,10 +27,12 @@ class App extends Component {
     // const menuCss = content["menuCss"].join(' ')
     const srcUrls = content['srcUrls'];
     const additionalCss = content['detailCss'].join(' ');
-    const dest =  this.state.lang === "th"? content['desc']["th"] : content['desc']["eng"];
+    const dest =
+      this.state.lang === 'th' ? content['desc']['th'] : content['desc']['eng'];
     const priceSmall = content['prices']['small'];
     const priceLarge = content['prices']['large'];
-    const key = this.state.lang === "th" ? content['name']["th"] : content['name']["eng"];
+    const key =
+      this.state.lang === 'th' ? content['name']['th'] : content['name']['eng'];
     const itemNumber = content['number'];
     return (
       <div className="section" key={key}>
@@ -60,10 +61,11 @@ class App extends Component {
           </div>
           <div className="item-price">
             <p>
-              <b>{key}</b><br/>
+              <b>{key}</b>
+              <br />
               (เมนูที่ {itemNumber})
             </p>
-        
+
             <p>
               แก้วเล็ก {priceSmall} บาท
               <br />
@@ -117,6 +119,15 @@ class App extends Component {
     ];
   };
 
+  onLangChanged = (e) =>{
+    this.setState({
+      lang: e.currentTarget.value
+      });
+  }
+
+  lang = (map) =>{
+    return this.state.lang === "th" ? map["th"] : map["eng"]
+  }
   render() {
     let sectionColor = [
       'rgba(40, 44, 52, 0.3)', // Landing Page
@@ -131,7 +142,7 @@ class App extends Component {
       <ReactFullpage
         // anchors={['firstPage', 'secondPage', 'thirdPage']}
         navigation={true}
-        navigationPosition={"left"}
+        navigationPosition={'left'}
         controlArrows={false}
         slidesNavigation={true}
         sectionsColor={sectionColor}
@@ -145,19 +156,28 @@ class App extends Component {
                 <button onClick={() => fullpageApi.moveSectionDown()}>
                   เลื่อนลง
                 </button>
-                <button>Thai</button>
-                <button>English</button>
+
+                <div>
+                  <div>
+                    <input type="radio" name="lang" value="eng" onChange={this.onLangChanged}/>
+                    <span>English</span>
+                  </div>
+                  <div>
+                    <input type="radio" name="lang" value="th"  onChange={this.onLangChanged} checked="checked"/>
+                    <span>ไทย</span>
+                  </div>
+                </div>
               </div>
               <div className="section" key="appusage">
                 {/* <div className="slide"> */}
                 <div className={'usage'}>
                   <div>
-                    <img src={handUpAndDown} alt="เลื่อขึ้นลง" />
+                    <img src={handUpAndDown} alt={this.lang({eng: "Slide Up/Down", th : "เลื่อนขึ้นลง"})} />
                   </div>
                   <div className="usage__leftArrow">
                     <img src={leftArrow} alt="<-" />
                   </div>
-                  <div>ดูเมนู</div>
+                  <div>{this.lang({eng: "Show menu", th : "ดูเมนู"})}</div>
                   <div>
                     <img src={handLeftRight} alt="เลื่อนซ้ายขวา" />
                   </div>
