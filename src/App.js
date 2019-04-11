@@ -112,7 +112,7 @@ class App extends Component {
             <br />
             <br />
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhrP3_LibZvuPd-Q_t12lISio4kzllkPgzBd_vGkf7FwBURA/viewform?usp=sf_link">
-              {this.text("commentUs")}
+              {this.text('commentUs')}
             </a>
           </div>
         </div>
@@ -120,15 +120,15 @@ class App extends Component {
     ];
   };
 
-  onLangChanged = (e) =>{
+  onLangChanged = e => {
     this.setState({
       lang: e.currentTarget.value
-      });
-  }
+    });
+  };
 
-  text = (key) =>{
-    return languages[key][this.state.lang]
-  }
+  text = key => {
+    return languages[key][this.state.lang];
+  };
 
   render() {
     let sectionColor = [
@@ -155,45 +155,85 @@ class App extends Component {
             <div id="fullpage-wrapper">
               <div className="section section1 welcome">
                 <img src={easeupLogo} alt="EaseUp" />
-                <button onClick={() => fullpageApi.moveSectionDown()}>                  
-                  {this.text("slideDown")}
+                <button onClick={() => fullpageApi.moveSectionDown()}>
+                  {this.text('slideDown')}
                 </button>
 
-                <div>
+                {/* <div class="options">
                   <div>
-                    <input type="radio" name="lang" value="eng" onChange={this.onLangChanged} checked={this.state.lang === 'eng'}/>
+                    <input
+                      type="radio"
+                      name="lang"
+                      value="eng"
+                      onChange={this.onLangChanged}
+                      checked={this.state.lang === 'eng'}
+                    />
                     <span>English</span>
                   </div>
                   <div>
-                    <input type="radio" name="lang" value="th"  onChange={this.onLangChanged} checked={this.state.lang === 'th'}/>
+                    <input
+                      type="radio"
+                      name="lang"
+                      value="th"
+                      onChange={this.onLangChanged}
+                      checked={this.state.lang === 'th'}
+                    />
                     <span>ไทย</span>
                   </div>
+                </div> */}
+
+                <div class="options">
+                  <input
+                    name="option"
+                    type="radio"
+                    id="click"
+                    class="hide"
+                    value="th"
+                    checked={this.state.lang === 'th'}
+                    onChange={this.onLangChanged}
+                  />
+                  <label for="click">ไทย</label>
+
+                  <input
+                    name="option"
+                    type="radio"
+                    id="touch"
+                    class="hide"
+                    value="eng"
+                    checked={this.state.lang === 'eng'}
+                    onChange={this.onLangChanged}
+                  />
+                  <label for="touch">English</label>
                 </div>
               </div>
+
               <div className="section" key="appusage">
                 {/* <div className="slide"> */}
                 <div className={'usage'}>
                   <div>
-                    <img src={handUpAndDown} alt={this.text("slideUpAndDown")} />
+                    <img
+                      src={handUpAndDown}
+                      alt={this.text('slideUpAndDown')}
+                    />
                   </div>
                   <div className="usage__leftArrow">
                     <img src={leftArrow} alt="<-" />
                   </div>
-                  <div>{this.text("showMenu")}</div>
+                  <div>{this.text('showMenu')}</div>
                   <div>
                     <img src={handLeftRight} alt="เลื่อนซ้ายขวา" />
                   </div>
                   <div className="usage__leftArrow">
                     <img src={leftArrow} alt="<-" />
                   </div>
-                  <div>{this.text("showPrice")}</div>
+                  <div>{this.text('showPrice')}</div>
                   <button
                     style={{
                       gridArea: '3 / 1 / span 1 / span 3'
                     }}
                     onClick={() => fullpageApi.moveSectionDown()}
                   >
-                    {this.text("scrollDownForMenu")}
+                    {this.text('scrollDownForMenu')}
                   </button>
                 </div>
 
