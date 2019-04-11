@@ -8,6 +8,7 @@ import leftArrow from './img/four-dots-horizontally-aligned-as-a-line.png';
 import LazyImage from './LazyImage';
 import placeHolder from './img/preload2.svg';
 import './App.scss';
+import languages from './langueages';
 
 class App extends Component {
   constructor(props) {
@@ -111,7 +112,7 @@ class App extends Component {
             <br />
             <br />
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhrP3_LibZvuPd-Q_t12lISio4kzllkPgzBd_vGkf7FwBURA/viewform?usp=sf_link">
-              กดเพื่อคอมเมนต์
+              {this.text("commentUs")}
             </a>
           </div>
         </div>
@@ -125,9 +126,10 @@ class App extends Component {
       });
   }
 
-  lang = (map) =>{
-    return this.state.lang === "th" ? map["th"] : map["eng"]
+  text = (key) =>{
+    return languages[key][this.state.lang]
   }
+
   render() {
     let sectionColor = [
       'rgba(40, 44, 52, 0.3)', // Landing Page
@@ -153,17 +155,17 @@ class App extends Component {
             <div id="fullpage-wrapper">
               <div className="section section1 welcome">
                 <img src={easeupLogo} alt="EaseUp" />
-                <button onClick={() => fullpageApi.moveSectionDown()}>
-                  เลื่อนลง
+                <button onClick={() => fullpageApi.moveSectionDown()}>                  
+                  {this.text("slideDown")}
                 </button>
 
                 <div>
                   <div>
-                    <input type="radio" name="lang" value="eng" onChange={this.onLangChanged}/>
+                    <input type="radio" name="lang" value="eng" onChange={this.onLangChanged} checked={this.state.lang === 'eng'}/>
                     <span>English</span>
                   </div>
                   <div>
-                    <input type="radio" name="lang" value="th"  onChange={this.onLangChanged} checked="checked"/>
+                    <input type="radio" name="lang" value="th"  onChange={this.onLangChanged} checked={this.state.lang === 'th'}/>
                     <span>ไทย</span>
                   </div>
                 </div>
@@ -172,26 +174,26 @@ class App extends Component {
                 {/* <div className="slide"> */}
                 <div className={'usage'}>
                   <div>
-                    <img src={handUpAndDown} alt={this.lang({eng: "Slide Up/Down", th : "เลื่อนขึ้นลง"})} />
+                    <img src={handUpAndDown} alt={this.text("slideUpAndDown")} />
                   </div>
                   <div className="usage__leftArrow">
                     <img src={leftArrow} alt="<-" />
                   </div>
-                  <div>{this.lang({eng: "Show menu", th : "ดูเมนู"})}</div>
+                  <div>{this.text("showMenu")}</div>
                   <div>
                     <img src={handLeftRight} alt="เลื่อนซ้ายขวา" />
                   </div>
                   <div className="usage__leftArrow">
                     <img src={leftArrow} alt="<-" />
                   </div>
-                  <div>ดูราคา</div>
+                  <div>{this.text("showPrice")}</div>
                   <button
                     style={{
                       gridArea: '3 / 1 / span 1 / span 3'
                     }}
                     onClick={() => fullpageApi.moveSectionDown()}
                   >
-                    กรุณาเลื่อนลงเพื่อชมเมนูค่ะ
+                    {this.text("scrollDownForMenu")}
                   </button>
                 </div>
 
