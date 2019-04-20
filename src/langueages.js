@@ -23,6 +23,34 @@ const languages = {
     eng: 'Please scroll down',
     th: 'กรุณาเลื่อนลงเพื่อชมเมนูค่ะ'
   },
+  menuth: {
+    eng: 'menu number',
+    th: 'เมนูที่'
+  },
+  smallCup: {
+    eng: 'Small',
+    th: 'แก้วเล็ก'
+  },
+  largeCup: {
+    eng: 'Large',
+    th: 'แก้วใหญ่'
+  },
+  bath: {
+    eng: 'Bath',
+    th: 'บาท'
+  },
+  ounce: {
+    eng: 'ounce',
+    th: 'ออนซ์'
+  },
+  menuName: {
+    eng: 'Menu name',
+    th: 'ชื่อเมนู'
+  },
+  detailOfTheMenu: {
+    eng: 'Detail of the menu. Ingredient, story etc.',
+    th: 'รายละเอียดต่างๆ วัตถุดิบ ส่วนผสม ฯลฯ'
+  },
 };
 
 export default languages;
