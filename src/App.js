@@ -1,15 +1,22 @@
-import React, { Component } from 'react';
-import ReactFullpage from '@fullpage/react-fullpage';
-import easeupLogo from './img/easeupLogo.png';
-import menu from './menu';
-import handUpAndDown from './img/001-finger_upAndDown.png';
-import handLeftRight from './img/002-finger_leftAndRight.png';
-import leftArrow from './img/four-dots-horizontally-aligned-as-a-line.png';
-import LazyImage from './LazyImage';
-import placeHolder from './img/preload2.svg';
-import './App.scss';
+import React, { Component } from "react";
+import ReactFullpage from "@fullpage/react-fullpage";
+import easeupLogo from "./img/easeupLogo.png";
+import menu from "./menu";
+import handUpAndDown from "./img/001-finger_upAndDown.png";
+import handLeftRight from "./img/002-finger_leftAndRight.png";
+import leftArrow from "./img/four-dots-horizontally-aligned-as-a-line.png";
+import LazyImage from "./LazyImage";
+import placeHolder from "./img/preload2.svg";
+import "./App.scss";
+import languages from "./langueages";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lang: "th"
+    };
+  }
   onLeave(origin, destination, direction) {
     // console.log("Leaving section " + origin.index);
   }
@@ -19,13 +26,18 @@ class App extends Component {
 
   slide = content => {
     // const menuCss = content["menuCss"].join(' ')
-    const srcUrls = content['srcUrls'];
-    const additionalCss = content['detailCss'].join(' ');
-    const dest = content['desc'];
-    const priceSmall = content['prices']['small'];
-    const priceLarge = content['prices']['large'];
-    const key = content['name'];
-    const itemNumber = content['number'];
+    const srcUrls = content["srcUrls"];
+    const additionalCss = content["detailCss"].join(" ");
+    let dest = content["desc"]["th"];
+    if (this.state.lang === "eng" && content["desc"]["eng"]) {
+      dest = content["desc"]["eng"];
+    }
+
+    const priceSmall = content["prices"]["small"];
+    const priceLarge = content["prices"]["large"];
+    const key =
+      this.state.lang === "th" ? content["name"]["th"] : content["name"]["eng"];
+    const itemNumber = content["number"];
     return (
       <div className="section" key={key}>
         <div className="slide">
@@ -34,7 +46,7 @@ class App extends Component {
           </div>
           {/*<div className={menuCss}></div>*/}
           <LazyImage
-            className={'menuItem'}
+            className={"menuItem"}
             svgPlaceHolder={placeHolder}
             srcUrls={srcUrls}
           />
@@ -43,28 +55,29 @@ class App extends Component {
           <div className="slideHeader">
             {key} #{itemNumber}
           </div>
-          <div className="item-detail">
-            <p className={additionalCss}>{dest}</p>
+          <div className="item-price">
+            <p>
+              <b>{key}</b>
+              <br />({this.text("menuth")} {itemNumber})
+            </p>
+            <p>
+              {this.text("smallCup")} {priceSmall} {this.text("bath")}
+              <br />
+              <span>(16 {this.text("ounce")})</span>
+            </p>
+            <p>
+              {this.text("largeCup")} {priceLarge} {this.text("bath")}
+              <br />
+              <span>(20 {this.text("smallCup")})</span>
+            </p>
           </div>
         </div>
         <div className="slide">
           <div className="slideHeader">
             {key} #{itemNumber}
           </div>
-          <div className="item-price">
-            <p>
-              <b>ราคา</b>
-            </p>
-            <p>
-              เล็ก {priceSmall} บาท
-              <br />
-              <span>(16 ออนซ์)</span>
-            </p>
-            <p>
-              ใหญ่ {priceLarge} บาท
-              <br />
-              <span>(20 ออนซ์)</span>
-            </p>
+          <div className="item-detail">
+            <p className={additionalCss}>{dest}</p>
           </div>
         </div>
       </div>
@@ -80,16 +93,9 @@ class App extends Component {
 
   notification = () => {
     return [
-      // <div className="section" key="holiday">
-      //   <div className="slide">
-      //     <div className={"notification"}>
-      //       <p>ร้านหยุดวัน <br /> อังคาร 9 - พุธ 10 <br />เมษายน <br />2019</p>
-      //     </div>
-      //   </div>
-      // </div>,
       <div className="section" key="thankyouSlide">
         <div className="slide">
-          <div className={'notification'}>
+          <div className={"notification"}>
             <p>
               ขอบพระคุณทุกท่านที่มาอุดหนุนค่ะ
               <br />
@@ -100,7 +106,7 @@ class App extends Component {
             <br />
             <br />
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhrP3_LibZvuPd-Q_t12lISio4kzllkPgzBd_vGkf7FwBURA/viewform?usp=sf_link">
-              กดเพื่อคอมเมนต์
+              {this.text("commentUs")}
             </a>
           </div>
         </div>
@@ -108,15 +114,25 @@ class App extends Component {
     ];
   };
 
+  onLangChanged = e => {
+    this.setState({
+      lang: e.currentTarget.value
+    });
+  };
+
+  text = key => {
+    return languages[key][this.state.lang];
+  };
+
   render() {
     let sectionColor = [
-      'rgba(40, 44, 52, 0.3)', // Landing Page
-      'rgba(40, 44, 52, 0.3)' // Usage Page
+      "rgba(40, 44, 52, 0.3)", // Landing Page
+      "rgba(40, 44, 52, 0.3)" // Usage Page
     ];
     menu.forEach(x => {
-      sectionColor.push('#282c34'); // Menu Pages
+      sectionColor.push("#282c34"); // Menu Pages
     });
-    sectionColor.push('#282c34'); // Thank you Page
+    sectionColor.push("#282c34"); // Thank you Page
 
     return (
       <ReactFullpage
@@ -134,37 +150,90 @@ class App extends Component {
               <div className="section section1 welcome">
                 <img src={easeupLogo} alt="EaseUp" />
                 <button onClick={() => fullpageApi.moveSectionDown()}>
-                  เลื่อนลง
+                  {this.text("slideDown")}
                 </button>
-              </div>
-              <div className="section" key="appusage">
-                {/* <div className="slide"> */}
-                <div className={'usage'}>
-                  <div>
-                    <img src={handUpAndDown} alt="เลื่อขึ้นลง" />
-                  </div>
-                  <div className="usage__leftArrow">
-                    <img src={leftArrow} alt="<-" />
-                  </div>
-                  <div>ดูเมนู</div>
-                  <div>
-                    <img src={handLeftRight} alt="เลื่อนซ้ายขวา" />
-                  </div>
-                  <div className="usage__leftArrow">
-                    <img src={leftArrow} alt="<-" />
-                  </div>
-                  <div>ดูราคา</div>
-                  <button
-                    style={{
-                      gridArea: '3 / 1 / span 1 / span 3'
-                    }}
-                    onClick={() => fullpageApi.moveSectionDown()}
-                  >
-                    กรุณาเลื่อนลงเพื่อชมเมนูค่ะ
-                  </button>
-                </div>
 
-                {/* </div> */}
+                <div className="options">
+                  <input
+                    name="option"
+                    type="radio"
+                    id="click"
+                    className="hide"
+                    value="th"
+                    checked={this.state.lang === "th"}
+                    onChange={this.onLangChanged}
+                  />
+                  <label htmlFor="click">ไทย</label>
+
+                  <input
+                    name="option"
+                    type="radio"
+                    id="touch"
+                    className="hide"
+                    value="eng"
+                    checked={this.state.lang === "eng"}
+                    onChange={this.onLangChanged}
+                  />
+                  <label htmlFor="touch">English</label>
+                </div>
+              </div>
+
+              <div className="section" key="appusage">
+                <div className="slide">
+                  <div className={"usage"}>
+                    <div>
+                      <img
+                        src={handUpAndDown}
+                        alt={this.text("slideUpAndDown")}
+                      />
+                    </div>
+                    <div className="usage__leftArrow">
+                      <img src={leftArrow} alt="<-" />
+                    </div>
+                    <div>{this.text("showMenu")}</div>
+                    <div>
+                      <img src={handLeftRight} alt="เลื่อนซ้ายขวา" />
+                    </div>
+                    <div className="usage__leftArrow">
+                      <img src={leftArrow} alt="<-" />
+                    </div>
+                    <div>{this.text("showPrice")}</div>
+                    <button
+                      style={{
+                        gridArea: "3 / 1 / span 1 / span 3",
+                        fontSize: "1.2rem"
+                      }}
+                      onClick={() => fullpageApi.moveSectionDown()}
+                    >
+                      {this.text("scrollDownForMenu")}
+                    </button>
+                  </div>
+                </div>
+                <div className="slide">
+                  <div className="slideHeader">menu number</div>
+                  <div className="item-price" style={{ color: "#222" }}>
+                    <p>
+                      <b>{this.text("menuName")}</b>
+                      <br />({this.text("menuth")} #)
+                    </p>
+                    <p>
+                      {this.text("smallCup")} # {this.text("bath")}
+                      <br />
+                      <span>(16 {this.text("ounce")})</span>
+                    </p>
+                    <p>
+                      {this.text("largeCup")} # {this.text("bath")}
+                      <br />
+                      <span>(20 {this.text("smallCup")})</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="slide">
+                  <div className="slideHeader">menu number</div>
+                  <div className="item-detail" style={{ color: "#222" }}>
+                    <p>{this.text("detailOfTheMenu")}</p>
+                  </div>
+                </div>
               </div>
               {this.slides()}
               {this.notification()}
