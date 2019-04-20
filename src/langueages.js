@@ -24,8 +24,12 @@ const languages = {
     th: 'กรุณาเลื่อนลงเพื่อชมเมนูค่ะ'
   },
   menuth: {
-    eng: 'menu number',
+    eng: '#',
     th: 'เมนูที่'
+  },
+  menuthDesc: {
+    eng: 'Menu number',
+    th: 'หมายเลขเมนู'
   },
   smallCup: {
     eng: 'Small',

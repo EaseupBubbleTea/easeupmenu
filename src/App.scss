@@ -228,13 +228,15 @@ $half-spacing-unit: $spacing-unit / 2;
 $quarter-spacing-unit: $spacing-unit / 4;
 
 .options {
-  position: absolute;
+  // position: absolute;
+  position: relative;
+  margin-top: 3vh;
   left: 0;
   right: 0;
-  top: 90vh;
-  transform: translateY(-50%);
+  // top: 90vh;
+  // transform: translateY(-50%);
   color: #333;
-  padding: $spacing-unit * 3;
+  // padding: $spacing-unit * 3;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
 

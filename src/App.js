@@ -58,7 +58,7 @@ class App extends Component {
           <div className="item-price">
             <p>
               <b>{key}</b>
-              <br />({this.text("menuth")} {itemNumber})
+              <br /><span>({this.text("menuth")} {itemNumber})</span>
             </p>
             <p>
               {this.text("smallCup")} {priceSmall} {this.text("bath")}
@@ -214,7 +214,7 @@ class App extends Component {
                   <div className="item-price" style={{ color: "#222" }}>
                     <p>
                       <b>{this.text("menuName")}</b>
-                      <br />({this.text("menuth")} #)
+                      <br /><span>({this.text("menuthDesc")})</span>
                     </p>
                     <p>
                       {this.text("smallCup")} # {this.text("bath")}
