@@ -67,7 +67,7 @@ const menu = [
       eng: ``,
       th: `มัทฉะที่ดี จะมีความขมฝาดน้อย แต่จะคงความเข้มข้นและหอมสดชื่นของชาเขียวแท้สไตล์ญี่ปุ่น.`
     },
-    prices: { small: 50, large: 60 },
+    prices: { small: 50, large: 65 },
     detailCss: ['item-detail', 'item-detail__matchaLatte'],
     srcUrls: {
       small: 'https://i.imgur.com/SJ6puYd.jpg',
