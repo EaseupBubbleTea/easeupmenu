@@ -114,8 +114,8 @@ const menu = [
     prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__darkChoco'],
     srcUrls: {
-      small: 'https://i.imgur.com/S51QXw2.jpg',
-      large: 'https://i.imgur.com/Kcryt9f.jpg'
+      small: 'https://i.imgur.com/7WVnAO7.jpg',
+      large: 'https://i.imgur.com/CTfunGA.jpg'
     },
     topping: [{ bubble: 5 }]
   },
