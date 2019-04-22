@@ -77,8 +77,10 @@ class App extends Component {
   render() {
     let sectionColor = [
       'rgba(40, 44, 52, 0.3)', // Landing Page
-      'rgba(40, 44, 52, 0.3)' // Usage Page
+      'rgba(40, 44, 52, 0.3)', // Usage Page
     ];
+
+    sectionColor.push('#282c34'); // Topping page
     menu.forEach(x => {
       sectionColor.push('#282c34'); // Menu Pages
     });
