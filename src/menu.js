@@ -27,7 +27,7 @@ const menu = [
     ด้วยความหอมอโรม่าของส้ม บวกกับบับเบิ้ลสอดไส้น้ำลิ้นจี่
     จึงเป็นอีกแก้วที่พร้อมรับมือกับสงกรานต์ได้เป็นอย่างดี`
     },
-    prices: { small: 60, large: 75 },
+    prices: { small: 65, large: 75 },
     detailCss: ['item-detail', 'item-detail__freshYuZu'],
     srcUrls: {
       small: 'https://i.imgur.com/axd8bpF.jpg',
@@ -45,7 +45,7 @@ const menu = [
     กระตุ้นการทำงานของระบบประสาทและหมุนเวียนโลหิต.
     EaseUp คัดสรรใบชาคุณภาพจากไต้หวัน เพื่อสัมผัสแห่งอู่หลงที่แท้จริง`
     },
-    prices: { small: 45, large: 55 },
+    prices: { small: 50, large: 60 },
     detailCss: ['item-detail', 'item-detail__oolong'],
     srcUrls: {
       small: 'https://i.imgur.com/rGmv4YW.jpg',
@@ -87,7 +87,7 @@ const menu = [
       eng: ``,
       th: `มัทฉะแท้ ตีกับนมโคสดด้วยมือแบบแก้วต่อแก้วสุดเข้มข้น ราดลงไปบนนมโคสดอย่างดี.`
     },
-    prices: { small: 60, large: 70 },
+    prices: {  large: 90 },
     detailCss: ['item-detail', 'item-detail__elegantMatcha'],
     srcUrls: {
       small: 'https://i.imgur.com/pcSrEzl.jpg',
@@ -101,7 +101,7 @@ const menu = [
       eng: ``,
       th: `สัมผัสกับความเข้มข้นเต็มรูปแบบกับ กับช็อคโกแลตแท้ถึง 3 ชนิด`
     },
-    prices: { small: 50, large: 60 },
+    prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__darkChoco'],
     srcUrls: {
       small: 'https://i.imgur.com/S51QXw2.jpg',
@@ -118,7 +118,7 @@ const menu = [
      ให้แร่ธาตุแคลเซียมและฟอสฟอรัสช่วยเสริมสร้างกระดูกและฟัน
      ทั้งยังแก้โรคหอบหืด หล่อลื่นลำไส้`
     },
-    prices: { small: 60, large: 70 },
+    prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__peachTea'],
     srcUrls: {
       small: 'https://i.imgur.com/rVPDCwD.jpg',
@@ -134,7 +134,7 @@ const menu = [
     บวกกับความหอมสดชื่นของชาอู่หลงก้านอ่อนอบผสมดอกหอมหมื่นลี้จากประเทศไต้หวัน
     ทำให้ความรู้สึกผ่อนคลายเหมือนได้พักผ่อนกลางธรรมชาติ`
     },
-    prices: { small: 60, large: 70 },
+    prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__oolongPeace'],
     srcUrls: {
       small: 'https://i.imgur.com/E0fEF9y.jpg',
@@ -149,7 +149,7 @@ const menu = [
       th: `เนื้อสตรอว์เบอร์รีสด ผสมกับซอสไซรัปสตรอว์เบอร์รีสูตรพิเศษ
     เวลาดื่มได้ความสดชื่นของน้ำและได้สัมผัสถึงเนื้อสตรอว์เบอร์รีแท้ๆ`
     },
-    prices: { small: 50, large: 60 },
+    prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__strawberryLimeSoda'],
     srcUrls: {
       small: 'https://i.imgur.com/xX2ExHm.jpg',
@@ -163,7 +163,7 @@ const menu = [
       eng: ``,
       th: `ซอสช็อคโกแลตบัตเตอร์เข้มข้น  ราดลงบนไมโลหอมๆ เข้ากันอย่างลงตัว สำหรับคนที่คลั่งไคล้ช้อคโกแลต ไม่ควรพลาด`
     },
-    prices: { small: 50, large: 60 },
+    prices: { small: 60, large: 70 },
     detailCss: ['item-detail', 'item-detail__miloMagma'],
     srcUrls: {
       small: 'https://i.imgur.com/LgYDMm3.jpg',

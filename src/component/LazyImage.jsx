@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import easeUpLogo from './img/easeupLogo.png';
+import easeUpLogo from '../img/easeupLogo.png';
 
 const SMALL = 'small';
 const LARGE = 'large';
