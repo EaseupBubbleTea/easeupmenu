@@ -36,8 +36,8 @@ const menu = [
     prices: { small: 65, large: 75 },
     detailCss: ['item-detail', 'item-detail__freshYuZu'],
     srcUrls: {
-      small: 'https://i.imgur.com/axd8bpF.jpg',
-      large: 'https://i.imgur.com/tSWxMD3.jpg'
+      small: 'https://i.imgur.com/yqq2gz3.jpg',
+      large: 'https://i.imgur.com/0fCD7AS.jpg'
     },
     topping: [{ Popping: 10 }]
   },
