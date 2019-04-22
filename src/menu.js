@@ -42,7 +42,7 @@ const menu = [
     topping: [{ Popping: 10 }]
   },
   {
-    name: { eng: 'Oolong iced tea', th: 'ชาอู่หลงเย็น' },
+    name: { eng: 'Oolong iced tea', th: 'บาร์เล่อู่หลง' },
     number: 3,
     desc: {
       eng: ``,
@@ -132,8 +132,8 @@ const menu = [
     prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__peachTea'],
     srcUrls: {
-      small: 'https://i.imgur.com/rVPDCwD.jpg',
-      large: 'https://i.imgur.com/fNAaN95.jpg'
+      small: 'https://i.imgur.com/FTfkb4P.jpg',
+      large: 'https://i.imgur.com/D9ECI5C.jpg'
     },
     topping: [{ Konjac: 10 }, { 'Aloe Vera': 10 }]
   },
@@ -149,8 +149,8 @@ const menu = [
     prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__oolongPeace'],
     srcUrls: {
-      small: 'https://i.imgur.com/E0fEF9y.jpg',
-      large: 'https://i.imgur.com/YPr9adR.jpg'
+      small: 'https://i.imgur.com/fOsG7xV.jpg',
+      large: 'https://i.imgur.com/iNRYrOt.jpg'
     },
     topping: [{ Konjac: 10 }, { 'Aloe Vera': 10 }]
   },
@@ -182,8 +182,8 @@ const menu = [
     prices: { small: 60, large: 70 },
     detailCss: ['item-detail', 'item-detail__miloMagma'],
     srcUrls: {
-      small: 'https://i.imgur.com/LgYDMm3.jpg',
-      large: 'https://i.imgur.com/FI1qvhK.jpg'
+      small: 'https://i.imgur.com/F0XIA1j.jpg',
+      large: 'https://i.imgur.com/M372Zzc.jpg'
     },
     topping: [
       { bubble: 5 }
