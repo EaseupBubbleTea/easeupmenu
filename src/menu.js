@@ -14,7 +14,13 @@ const menu = [
     srcUrls: {
       small: 'https://i.imgur.com/rfKoGBn.jpg',
       large: 'https://i.imgur.com/dmG3Vrf.jpg'
-    }
+    },
+    topping: [
+      { bubble: 5 },
+      { Konjac: 10 },
+      { 'Aloe Vera': 10 },
+      { Popping: 10 }
+    ]
   },
   {
     name: { eng: 'Fresh YuZu', th: 'เฟรชยูสุ' },
@@ -87,7 +93,7 @@ const menu = [
       eng: ``,
       th: `มัทฉะแท้ ตีกับนมโคสดด้วยมือแบบแก้วต่อแก้วสุดเข้มข้น ราดลงไปบนนมโคสดอย่างดี.`
     },
-    prices: {  large: 90 },
+    prices: { large: 90 },
     detailCss: ['item-detail', 'item-detail__elegantMatcha'],
     srcUrls: {
       small: 'https://i.imgur.com/pcSrEzl.jpg',

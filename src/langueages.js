@@ -55,6 +55,10 @@ const languages = {
     eng: 'Detail of the menu. Ingredient, story etc.',
     th: 'รายละเอียดต่างๆ วัตถุดิบ ส่วนผสม ฯลฯ'
   },
+  bubble:{
+    eng: "Bubble",
+    th: "ไข่มุก"
+  }
 };
 
 export default languages;

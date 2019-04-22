@@ -26,8 +26,9 @@ class App extends Component {
   slides = () => {
     let menus = [];
     menu.forEach(x => {
+      const key = this.state.lang === 'th' ? x['name']['th'] : x['name']['eng'];
       menus.push(
-        <MenuSlide content={x} lang={this.state.lang} i18n={this.text} />
+        <MenuSlide key={key} content={x} lang={this.state.lang} i18n={this.text} />
       );
     });
     return menus;
