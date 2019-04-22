@@ -198,9 +198,9 @@ class App extends Component {
                   />
                   <div className="toppingDesc">
                     <div>
-                      <div>บุก <br/>+<br/> 10 บาท</div>
-                      <div>อโล <br/>+<br/> 10 บาท</div>
-                      <div>มุก <br/>+<br/> 5 บาท</div>
+                      <div>บุก<br/>+<br/>10<br/>บาท</div>
+                      <div>อโล<br/>+<br/>10<br/>บาท</div>
+                      <div>มุก<br/>+<br/>5<br/>บาท</div>
                     </div>
                   </div>
                 </div>

@@ -343,10 +343,13 @@ $quarter-spacing-unit: $spacing-unit / 4;
 
     & div {
       padding: 1rem;
-      max-width: 4rem;
+      max-width: 6rem;
       position: relative;
       top: -10rem;
       text-shadow: 1px 2px 7px rgba(0,0,0,0.6);
+      background: rgba($color: #eee, $alpha: 0.6);
+      text-align: center
+
     }
   }
 
