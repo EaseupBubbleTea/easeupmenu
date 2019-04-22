@@ -11,10 +11,25 @@ const MenuSlide = props => {
     dest = content['desc']['eng'];
   }
 
+
   const priceSmall = content['prices']['small'];
   const priceLarge = content['prices']['large'];
   const key = lang === 'th' ? content['name']['th'] : content['name']['eng'];
   const itemNumber = content['number'];
+
+  const itemPrice = (i18nKey, price ,ounz) => {
+    if (!price) {
+      return <p />;
+    }
+    return (
+      <p>
+       {`${i18n(i18nKey)} ${price} ${i18n('bath')}`}
+        <br />
+        <span>({ounz} {i18n('ounce')})</span>
+      </p>
+    );
+  };
+
   return (
     <div className="section" key={key}>
       <div className="slide">
@@ -38,16 +53,8 @@ const MenuSlide = props => {
             <span>
               ({i18n('menuth')} {itemNumber})
             </span>
-          </p>
-          <p>
-            {i18n('smallCup')} {priceSmall} {i18n('bath')}
-            <br />
-            <span>(16 {i18n('ounce')})</span>
-          </p>
-          <p>
-            {i18n('largeCup')} {priceLarge} {i18n('bath')}
-            <br />
-            <span>(20 {i18n('smallCup')})</span>
+            {itemPrice('smallCup', priceSmall , 16)}
+            {itemPrice('largeCup', priceLarge ,20)}
           </p>
         </div>
       </div>
