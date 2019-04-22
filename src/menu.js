@@ -70,8 +70,8 @@ const menu = [
     prices: { small: 50, large: 60 },
     detailCss: ['item-detail', 'item-detail__matchaLatte'],
     srcUrls: {
-      small: 'https://i.imgur.com/IeosYnL.jpg',
-      large: 'https://i.imgur.com/unXQ2Tf.jpg'
+      small: 'https://i.imgur.com/SJ6puYd.jpg',
+      large: 'https://i.imgur.com/WSmGQ9Z.jpg'
     },
     topping: [{ bubble: 5 }]
   },
