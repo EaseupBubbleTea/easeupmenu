@@ -8,6 +8,8 @@ import leftArrow from './img/four-dots-horizontally-aligned-as-a-line.png';
 import './App.scss';
 import languages from './langueages';
 import MenuSlide from './component/MenuSlide';
+import placeHolder from './img/preload2.svg';
+import LazyImage from './component/LazyImage';
 
 class App extends Component {
   constructor(props) {
@@ -28,7 +30,12 @@ class App extends Component {
     menu.forEach(x => {
       const key = this.state.lang === 'th' ? x['name']['th'] : x['name']['eng'];
       menus.push(
-        <MenuSlide key={key} content={x} lang={this.state.lang} i18n={this.text} />
+        <MenuSlide
+          key={key}
+          content={x}
+          lang={this.state.lang}
+          i18n={this.text}
+        />
       );
     });
     return menus;
@@ -176,6 +183,25 @@ class App extends Component {
                   <div className="slideHeader">menu number</div>
                   <div className="item-detail" style={{ color: '#222' }}>
                     <p>{this.text('detailOfTheMenu')}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="section" key="toppingBackground">
+                <div className="slide">
+                  <LazyImage
+                    className={'toppingBackground'}
+                    svgPlaceHolder={placeHolder}
+                    srcUrls={{
+                      large: 'https://i.imgur.com/YAUBg9X.jpg',
+                      small: 'https://i.imgur.com/xpo8wrS.jpg'
+                    }}
+                  />
+                  <div className="toppingDesc">
+                    <div>
+                      <div>บุก + 10 บ.</div>
+                      <div>อโล + 10 บ.</div>
+                      <div>มุก + 5 บ.</div>
+                    </div>
                   </div>
                 </div>
               </div>

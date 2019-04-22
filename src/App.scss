@@ -80,6 +80,14 @@ button {
   height: 100vh;
 }
 
+.toppingBackground {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+}
+
 .item-detail {
   font-size: 4vh;
   color: #d3d3d3;
@@ -166,9 +174,9 @@ button {
   height: 0;
   border-style: solid;
   margin-top: -38px;
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .fp-controlArrow.fp-prev {
   left: 1vw;
@@ -182,45 +190,44 @@ button {
   border-color: transparent transparent transparent rgba(226, 223, 223, 0.55);
 }
 
-#fp-nav ul li a span, 
+#fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    width: 16px;
-    height: 16px;
-    margin: -8px 0 0 -8px;
-    background: transparent;
-    box-sizing: border-box;
-    box-shadow: inset 0 0 0 2px white;
-    overflow: hidden;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 0;
-      border-radius: 50%;
-      left: 0;
-      bottom: 0;
-      background-color: #fff;
-      box-shadow: 0 0 1px #fff;
-      transition: height 0.3s;
-      
-   }
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background: transparent;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px white;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 0 1px #fff;
+    transition: height 0.3s;
+  }
 }
-      
-#fp-nav ul li a.active span, 
-.fp-slidesNav ul li a.active span, 
-#fp-nav ul li:hover a.active span, 
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span {
-     width: 16px;
-    height: 16px;
-    margin: -8px 0 0 -8px;
-    background: transparent;
-    box-sizing: border-box;
-    box-shadow: inset 0 0 0 2px white;
-    
-   &::after {
-     height: 100%;
-   }
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background: transparent;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px white;
+
+  &::after {
+    height: 100%;
+  }
 }
 
 $spacing-unit: 16px;
@@ -254,7 +261,7 @@ $quarter-spacing-unit: $spacing-unit / 4;
     // .options > label:before
     // this creates the outer circle for faux radio button
     &:before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       width: 16px;
@@ -269,7 +276,7 @@ $quarter-spacing-unit: $spacing-unit / 4;
     // .options > label:after
     // this creates the inner circle for active faux radio button
     &:after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       width: 0;
@@ -279,7 +286,7 @@ $quarter-spacing-unit: $spacing-unit / 4;
       margin-top: 0;
       background: #fff;
       border-radius: 4px;
-      transition: .2s ease-in-out;
+      transition: 0.2s ease-in-out;
     }
   }
 
@@ -294,7 +301,7 @@ $quarter-spacing-unit: $spacing-unit / 4;
   }
 }
 
-.toppingListContainer{
+.toppingListContainer {
   color: #d3d3d3;
   font-size: 5vh;
   padding: 6vw;
@@ -305,9 +312,40 @@ $quarter-spacing-unit: $spacing-unit / 4;
     text-align: left;
     width: 100%;
 
-    tr{
+    tr {
       border-bottom: 1px solid wheat;
       line-height: 10vh;
     }
+  }
+}
+
+.toppingDesc {
+  // margin: auto;
+  // width: 100vw;
+  // padding: 4vw;
+ 
+  position: absolute;
+  left: 50%;
+  top: 5vh;
+  color: #d3d3d3;
+  font-size: 3vh;
+
+
+  & > div  {
+    position: relative;
+    left: -50%;
+    width: 100vw;
+    padding: 4vw;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(#fff, $alpha: 0.2);
+
+    & div {
+      padding: 1rem;
+      max-width: 4rem;
+    }
+  }
+
+  &__table {
   }
 }
