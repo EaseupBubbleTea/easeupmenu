@@ -15,6 +15,7 @@ const MenuSlide = props => {
   const priceLarge = content['prices']['large'];
   const key = lang === 'th' ? content['name']['th'] : content['name']['eng'];
   const itemNumber = content['number'];
+  const toppingList = content['topping'];
 
   const itemPrice = (i18nKey, price, ounz) => {
     const key = `${i18nKey}${price}${ounz}`;
@@ -60,7 +61,20 @@ const MenuSlide = props => {
           {itemPrice('largeCup', priceLarge, 20)}
         </div>
       </Slide>
-
+      {toppingList && (
+        <Slide>
+          <div className="slideHeader">
+            {key} #{itemNumber}
+          </div>
+          <div className="toppingListContainer">
+            <p>
+              <b>Topping</b>
+            </p>
+            <br />
+            {topping(content['topping'])}
+          </div>
+        </Slide>
+      )}
       <Slide>
         <div className="slideHeader">
           {key} #{itemNumber}
@@ -77,6 +91,29 @@ const Slide = props => {
   const className = props.className ? props.className : '';
 
   return <div className={`slide ${className}`}>{props.children}</div>;
+};
+
+const topping = topping => {
+  if (!topping) {
+    return;
+  }
+  let trs = [];
+  topping.forEach(element => {
+    for (const key in element) {
+      trs.push(
+        <tr key={key}>
+          <th>{key}</th>
+          <th style={{ textAlign: 'right' }}>{element[key]}</th>
+        </tr>
+      );
+    }
+  });
+
+  return (
+    <table className="toppingListContainer__table">
+      <tbody>{trs}</tbody>
+    </table>
+  );
 };
 
 export default MenuSlide;

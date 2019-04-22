@@ -293,3 +293,21 @@ $quarter-spacing-unit: $spacing-unit / 4;
     }
   }
 }
+
+.toppingListContainer{
+  color: #d3d3d3;
+  font-size: 5vh;
+  padding: 6vw;
+  margin: auto;
+  width: 80vw;
+  &__table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+
+    tr{
+      border-bottom: 1px solid wheat;
+      line-height: 10vh;
+    }
+  }
+}

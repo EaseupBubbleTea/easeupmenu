@@ -38,7 +38,8 @@ const menu = [
     srcUrls: {
       small: 'https://i.imgur.com/axd8bpF.jpg',
       large: 'https://i.imgur.com/tSWxMD3.jpg'
-    }
+    },
+    topping: [{ Popping: 10 }]
   },
   {
     name: { eng: 'Oolong iced tea', th: 'ชาอู่หลงเย็น' },
@@ -56,7 +57,8 @@ const menu = [
     srcUrls: {
       small: 'https://i.imgur.com/rGmv4YW.jpg',
       large: 'https://i.imgur.com/EZDWjT1.jpg'
-    }
+    },
+    topping: [{ bubble: 5 }, { Konjac: 10 }, { 'Aloe Vera': 10 }]
   },
   {
     name: { eng: 'Iced Matcha Latte', th: 'มัทฉะลาเต้' },
@@ -70,7 +72,8 @@ const menu = [
     srcUrls: {
       small: 'https://i.imgur.com/IeosYnL.jpg',
       large: 'https://i.imgur.com/unXQ2Tf.jpg'
-    }
+    },
+    topping: [{ bubble: 5 }]
   },
   {
     name: { eng: 'Kuromitsu Milk Tea', th: 'คุโร่มิทสึ' },
@@ -84,7 +87,8 @@ const menu = [
     srcUrls: {
       small: 'https://i.imgur.com/qE7q199.jpg',
       large: 'https://i.imgur.com/lQjISoJ.jpg'
-    }
+    },
+    topping: [{ bubble: 5 }]
   },
   {
     name: { eng: 'Elegance Matcha', th: 'เอลลิแกรนซ์มัทฉะ' },
@@ -112,10 +116,11 @@ const menu = [
     srcUrls: {
       small: 'https://i.imgur.com/S51QXw2.jpg',
       large: 'https://i.imgur.com/Kcryt9f.jpg'
-    }
+    },
+    topping: [{ bubble: 5 }]
   },
   {
-    name: { eng: 'Peach Tea', th: 'พีชไอซ์ที' },
+    name: { eng: 'Peach Light', th: 'พีชไลท์' },
     number: 8,
     desc: {
       eng: ``,
@@ -129,7 +134,8 @@ const menu = [
     srcUrls: {
       small: 'https://i.imgur.com/rVPDCwD.jpg',
       large: 'https://i.imgur.com/fNAaN95.jpg'
-    }
+    },
+    topping: [{ Konjac: 10 }, { 'Aloe Vera': 10 }]
   },
   {
     name: { eng: 'Oolong Peach Tea', th: 'อู่หลงพีชไอซ์ที' },
@@ -145,7 +151,8 @@ const menu = [
     srcUrls: {
       small: 'https://i.imgur.com/E0fEF9y.jpg',
       large: 'https://i.imgur.com/YPr9adR.jpg'
-    }
+    },
+    topping: [{ Konjac: 10 }, { 'Aloe Vera': 10 }]
   },
   {
     name: { eng: 'Strawberry Lime Soda', th: 'สตรอว์เบอร์รี ไลม์ โซดา' },
@@ -160,7 +167,10 @@ const menu = [
     srcUrls: {
       small: 'https://i.imgur.com/xX2ExHm.jpg',
       large: 'https://i.imgur.com/M2XjANU.jpg'
-    }
+    },
+    topping: [
+      { Popping: 10 }
+    ]
   },
   {
     name: { eng: 'Milo Magma', th: 'ไมโลแมกม่า' },
@@ -174,7 +184,10 @@ const menu = [
     srcUrls: {
       small: 'https://i.imgur.com/LgYDMm3.jpg',
       large: 'https://i.imgur.com/FI1qvhK.jpg'
-    }
+    },
+    topping: [
+      { bubble: 5 }
+    ]
   }
 ];
 
