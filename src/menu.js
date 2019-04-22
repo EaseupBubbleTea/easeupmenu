@@ -71,7 +71,7 @@ const menu = [
     detailCss: ['item-detail', 'item-detail__matchaLatte'],
     srcUrls: {
       small: 'https://i.imgur.com/SJ6puYd.jpg',
-      large: 'https://i.imgur.com/WSmGQ9Z.jpg'
+      large: 'https://i.imgur.com/FPvfP4o.jpg'
     },
     topping: [{ bubble: 5 }]
   },
@@ -100,8 +100,8 @@ const menu = [
     prices: { large: 90 },
     detailCss: ['item-detail', 'item-detail__elegantMatcha'],
     srcUrls: {
-      small: 'https://i.imgur.com/pcSrEzl.jpg',
-      large: 'https://i.imgur.com/0ZBA0wM.jpg'
+      small: 'https://i.imgur.com/vC9uvQh.jpg',
+      large: 'https://i.imgur.com/qeiKnOE.jpg'
     }
   },
   {
@@ -165,8 +165,8 @@ const menu = [
     prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__strawberryLimeSoda'],
     srcUrls: {
-      small: 'https://i.imgur.com/xX2ExHm.jpg',
-      large: 'https://i.imgur.com/M2XjANU.jpg'
+      small: 'https://i.imgur.com/ruIMyqJ.jpg',
+      large: 'https://i.imgur.com/sdNQLzJ.jpg'
     },
     topping: [
       { Popping: 10 }
@@ -188,7 +188,41 @@ const menu = [
     topping: [
       { bubble: 5 }
     ]
-  }
+  },
+  {
+    name: { eng: 'Hojicha Latte', th: 'โฮจิฉะ ลาเต้' },
+    number: 13,
+    desc: {
+      eng: ``,
+      th: `ใบชาเขียวที่ไม่ใช่สีเขียว นำใบชาไปผ่านการคั่วไฟจนได้กลิ่นหอมอันเป็นเอกลักษณ์ และการคั่วไฟทำให้รสชาติชาไม่ฝาดไม่ขมอย่างชาเขียวชนิดอื่นๆ อีกทั้งโฮจิฉะยังมีปริมาณคาเฟอีนน้อยกว่าด้วย สีสันของชาเขียวโฮจิฉะจะออกสีน้ำตาลอ่อนๆ รสชาติอ่อน ดื่มง่าย `
+    },
+    prices: { small: 50, large: 60 },
+    detailCss: ['item-detail'],
+    srcUrls: {
+      small: 'https://i.imgur.com/f8UEFTZ.jpg',
+      large: 'https://i.imgur.com/pi36sx4.jpg'
+    },
+    topping: [
+      { bubble: 5 }
+    ]
+  },
+  {
+    name: { eng: 'Purple Sweet Potato Lava', th: 'เพอเพิลสวีทโปเตโต้ลาวา' },
+    number: 15,
+    desc: {
+      eng: ``,
+      th: `มันเทศสีม่วง พันธุ์จากเกาะโอกินาว่า ลักษณะพิเศษมีสีม่วงสด มีเซี้ยนน้อย หอมหวานธรรมชาติ นมมาบดละเอียด ทางร้านนำมาทำซอสลาวา เสริฟคู่กับนมสด ราดลงบนนมสดแท้ เวลาดื่ม จะได้สัมผัสถึงเนื้อมันม่วงแท้ๆ`
+    },
+    prices: { small: 60, large: 70 },
+    detailCss: ['item-detail'],
+    srcUrls: {
+      small: 'https://i.imgur.com/50Cl2YZ.jpg',
+      large: 'https://i.imgur.com/hRhQ5AM.jpg'
+    },
+    topping: [
+      { bubble: 5 }
+    ]
+  },
 ];
 
 export default menu;
