@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import easeUpLogo from '../img/easeupLogo.png';
+import PropTypes from 'prop-types';
 
 const SMALL = 'small';
 const LARGE = 'large';
@@ -86,13 +87,19 @@ class LazyImage extends Component {
     return (
       <div
         className={className}
-        style={{
+        style={{...{
           backgroundImage: `url(${window.location.origin + svgPlaceHolder})`,
           backgroundSize: 'initial'
-        }}
+        },...this.props.style}}
       />
     );
   }
 }
+
+LazyImage.propTypes = {
+  srcUrls: PropTypes.array,
+  className: PropTypes.string,
+  svgPlaceHolder: PropTypes.any,
+};
 
 export default LazyImage;
