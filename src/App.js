@@ -17,13 +17,19 @@ import {domID} from './constant';
 class App extends Component {
   constructor(props) {
     super(props);
+
+    this.pageCache = {
+      main: <Main onMenuClick={this.onDrinkMenuClick} />
+    }
+
     this.state = {
       lang: 'th',
       currentView: null,
-      loadedPage: { main: <Main onMenuClick={this.onDrinkMenuClick} /> },
+      loadedPage: { main: this.pageCache.main },
       mainMenuSelected: domID.mainMeu.main,
       mainMenuChecked: false
     };
+    
   }
 
   onMainMenuItemClick = e =>{
@@ -43,7 +49,7 @@ class App extends Component {
 
   componentDidMount = () => {
     if (!this.state.currentView) {
-      this.setState({ currentView: this.state.loadedPage['main'] });
+      this.setState({ currentView: this.pageCache.main });
     }
   };
 
