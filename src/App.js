@@ -10,29 +10,42 @@ import languages from './langueages';
 import MenuSlide from './component/MenuSlide';
 // import placeHolder from './img/preload2.svg';
 // import LazyImage from './component/LazyImage';
-import Main from './component/Main'
+import Main from './component/Main';
+import Menu from './component/Menu';
+import {domID} from './constant';
 
 class App extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       lang: 'th',
       currentView: null,
-      loadedPage: {"main": <Main onMenuClick={this.onMenuClick} />}
+      loadedPage: { main: <Main onMenuClick={this.onDrinkMenuClick} /> },
+      mainMenuSelected: domID.mainMeu.main,
+      mainMenuChecked: false
     };
   }
 
-  onMenuClick = (menuId) =>{
-    console.log(menuId)
+  onMainMenuItemClick = e =>{
+    this.setState({ mainMenuSelected:  e.target.id , mainMenuChecked: false});
+    console.log("onMenuItem");
   }
 
-  componentDidMount = () =>{
-    if (!this.state.currentView){
-      this.setState({currentView: this.state.loadedPage["main"]})
+  onDrinkMenuClick = menuId =>{
+    
+    console.log("onMenuCLick ", menuId);
+  }
+
+  onAppMenuClick = e =>{
+    this.setState({mainMenuChecked: !this.state.mainMenuChecked});
+    console.log("onAppMenuClick ", e);
+  }
+
+  componentDidMount = () => {
+    if (!this.state.currentView) {
+      this.setState({ currentView: this.state.loadedPage['main'] });
     }
-  }
-
+  };
 
   slides = () => {
     let menus = [];
@@ -55,7 +68,12 @@ class App extends Component {
   };
 
   render() {
-    return <div className="appContainer">{this.state.currentView}</div>;
+    return (
+      <div className="appContainer">
+        <Menu selected={this.state.mainMenuSelected} onMenuClick={this.onAppMenuClick} checked={this.state.mainMenuChecked}  onItemClick={this.onMainMenuItemClick}/>
+        {this.state.currentView}
+      </div>
+    );
   }
 }
 
