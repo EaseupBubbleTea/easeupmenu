@@ -97,7 +97,7 @@ class LazyImage extends Component {
 }
 
 LazyImage.propTypes = {
-  srcUrls: PropTypes.array,
+  srcUrls: PropTypes.object,
   className: PropTypes.string,
   svgPlaceHolder: PropTypes.any,
 };

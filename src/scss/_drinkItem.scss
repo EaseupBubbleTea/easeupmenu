@@ -1,0 +1,47 @@
+@import "var";
+
+.drinkItem {
+  background-color: yellow;
+  height: calc(100vh - #{$appContainerBorderBottom});
+  width: 100%;
+  display: grid;
+  grid-column: 1fr;
+  grid-template-rows: 1fr 3rem;
+  flex-direction: column;
+
+  &__body {
+    background-color: lightblue;
+    display: grid;
+
+    &--name {
+    }
+
+    &__image {
+      img{
+        width: 90vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &--lazy {
+        width: 80vw;
+        height: 70vh;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-around;
+    &--back {
+      width: 3rem;
+    }
+    &--home {
+      width: 3rem;
+    }
+    &--forward {
+      width: 3rem;
+    }
+  }
+}

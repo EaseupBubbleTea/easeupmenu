@@ -33,7 +33,7 @@ const Menu = props => {
         checked={checked}
         onChange={onMenuClick}
       />
-      <label for="mainMenu-toggle" className="mainMenu__button">
+      <label htmlFor="mainMenu-toggle" className="mainMenu__button">
         <span className="mainMenu__icon">&nbsp;</span>
       </label>
       <div className="mainMenu__background">&nbsp;</div>

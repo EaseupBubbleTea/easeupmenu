@@ -15,7 +15,7 @@ class Main extends Component {
     let menus = [];
     const { onMenuClick } = this.props;
     menu.forEach(x => {
-      menus.push(<ListItem menu={x} onClick={() => onMenuClick(x.number)} />);
+      menus.push(<ListItem menu={x} onClick={() => onMenuClick(x.number)} key={x.number} />);
     });
     this.setState({ menus });
   };
