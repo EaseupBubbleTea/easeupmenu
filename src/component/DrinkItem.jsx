@@ -3,17 +3,14 @@ import LazyImage from './LazyImage';
 import imgePlaceHolder from '../img/preloader.svg';
 
 class DrinkItem extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const {
       item,
       lang,
-      onPreviousClick,
+      // onPreviousClick,
       onHomeClick,
-      onNextClick
+      // onNextClick
     } = this.props;
 
     let desc = item['desc']['th'];

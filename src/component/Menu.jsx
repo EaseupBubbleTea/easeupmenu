@@ -7,22 +7,22 @@ const Menu = props => {
     'mainMenu__link',
     selected === domID.mainMeu.main ? 'mainMenu__link--selected' : ''
   ].join(' ');
-  const announcement = [
-    'mainMenu__link',
-    selected === domID.mainMeu.announcement ? 'mainMenu__link--selected' : ''
-  ].join(' ');
-  const location = [
-    'mainMenu__link',
-    selected === domID.mainMeu.location ? 'mainMenu__link--selected' : ''
-  ].join(' ');
-  const comment = [
-    'mainMenu__link',
-    selected === domID.mainMeu.comment ? 'mainMenu__link--selected' : ''
-  ].join(' ');
-  const about = [
-    'mainMenu__link',
-    selected === domID.mainMeu.about ? 'mainMenu__link--selected' : ''
-  ].join(' ');
+  // const announcement = [
+  //   'mainMenu__link',
+  //   selected === domID.mainMeu.announcement ? 'mainMenu__link--selected' : ''
+  // ].join(' ');
+  // const location = [
+  //   'mainMenu__link',
+  //   selected === domID.mainMeu.location ? 'mainMenu__link--selected' : ''
+  // ].join(' ');
+  // const comment = [
+  //   'mainMenu__link',
+  //   selected === domID.mainMeu.comment ? 'mainMenu__link--selected' : ''
+  // ].join(' ');
+  // const about = [
+  //   'mainMenu__link',
+  //   selected === domID.mainMeu.about ? 'mainMenu__link--selected' : ''
+  // ].join(' ');
 
   return (
     <div className="mainMenu">

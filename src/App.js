@@ -7,7 +7,7 @@ import menu from './menu';
 // import leftArrow from './img/four-dots-horizontally-aligned-as-a-line.png';
 import './App.scss';
 import languages from './langueages';
-import MenuSlide from './component/MenuSlide';
+// import MenuSlide from './component/MenuSlide';
 // import placeHolder from './img/preload2.svg';
 // import LazyImage from './component/LazyImage';
 import Main from './component/Main';
@@ -16,7 +16,7 @@ import { domID } from './constant';
 import DrinkItem from './component/DrinkItem';
 import Announcement from './component/Announcement';
 import Location from './component/Location';
-import Commnet from './component/Comment';
+// import Commnet from './component/Comment';
 import Commment from './component/Comment';
 import About from './component/About';
 
