@@ -1,3 +1,10 @@
+/**
+ * 
+ * menu[x][srcurls][icon] = 
+ * 
+ * 
+ */
+
 const menu = [
   {
     name: { eng: 'Signature', th: 'ชานมไข่มุกต้นตำหรับ' },
@@ -12,6 +19,7 @@ const menu = [
     prices: { small: 40, large: 50 },
     detailCss: ['item-detail', 'item-detail__signature'],
     srcUrls: {
+      icon: 'https://i.imgur.com/u40EslI.jpg',
       small: 'https://i.imgur.com/rfKoGBn.jpg',
       large: 'https://i.imgur.com/dmG3Vrf.jpg'
     },
@@ -36,6 +44,7 @@ const menu = [
     prices: { small: 65, large: 75 },
     detailCss: ['item-detail', 'item-detail__freshYuZu'],
     srcUrls: {
+      icon: 'https://i.imgur.com/wEGlGC7.jpg',
       small: 'https://i.imgur.com/yqq2gz3.jpg',
       large: 'https://i.imgur.com/0fCD7AS.jpg'
     },
@@ -55,6 +64,7 @@ const menu = [
     prices: { small: 50, large: 60 },
     detailCss: ['item-detail', 'item-detail__oolong'],
     srcUrls: {
+      icon: 'https://i.imgur.com/9AL9Pfm.jpg',
       small: 'https://i.imgur.com/rGmv4YW.jpg',
       large: 'https://i.imgur.com/EZDWjT1.jpg'
     },
@@ -70,6 +80,7 @@ const menu = [
     prices: { small: 50, large: 65 },
     detailCss: ['item-detail', 'item-detail__matchaLatte'],
     srcUrls: {
+      icon: 'https://i.imgur.com/aoebzDW.jpg',
       small: 'https://i.imgur.com/SJ6puYd.jpg',
       large: 'https://i.imgur.com/FPvfP4o.jpg'
     },
@@ -85,6 +96,7 @@ const menu = [
     prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__kuromitsu'],
     srcUrls: {
+      icon: 'https://i.imgur.com/ACfKelZ.jpg',
       small: 'https://i.imgur.com/qE7q199.jpg',
       large: 'https://i.imgur.com/lQjISoJ.jpg'
     },
@@ -101,6 +113,7 @@ const menu = [
     prices: { large: 90 },
     detailCss: ['item-detail', 'item-detail__elegantMatcha'],
     srcUrls: {
+      icon: 'https://i.imgur.com/GZiS25u.jpg',
       small: 'https://i.imgur.com/vC9uvQh.jpg',
       large: 'https://i.imgur.com/qeiKnOE.jpg'
     }
@@ -115,6 +128,7 @@ const menu = [
     prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__darkChoco'],
     srcUrls: {
+      icon: 'https://i.imgur.com/7WVnAO7.jpg',
       small: 'https://i.imgur.com/7WVnAO7.jpg',
       large: 'https://i.imgur.com/CTfunGA.jpg'
     },
@@ -133,6 +147,7 @@ const menu = [
     prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__peachTea'],
     srcUrls: {
+      icon: 'https://i.imgur.com/LQUZutY.jpg',
       small: 'https://i.imgur.com/FTfkb4P.jpg',
       large: 'https://i.imgur.com/D9ECI5C.jpg'
     },
@@ -150,6 +165,7 @@ const menu = [
     prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__oolongPeace'],
     srcUrls: {
+      icon: 'https://i.imgur.com/9qUVY4K.jpg',
       small: 'https://i.imgur.com/fOsG7xV.jpg',
       large: 'https://i.imgur.com/iNRYrOt.jpg'
     },
@@ -165,6 +181,7 @@ const menu = [
     prices: { small: 55, large: 65 },
     detailCss: ['item-detail', 'item-detail__strawberryLimeSoda'],
     srcUrls: {
+      icon: 'https://i.imgur.com/MVhErC6.jpg',
       small: 'https://i.imgur.com/ruIMyqJ.jpg',
       large: 'https://i.imgur.com/sdNQLzJ.jpg'
     },
@@ -182,6 +199,7 @@ const menu = [
     prices: { small: 60, large: 70 },
     detailCss: ['item-detail', 'item-detail__miloMagma'],
     srcUrls: {
+      icon: 'https://i.imgur.com/QbUgQGV.jpg',
       small: 'https://i.imgur.com/F0XIA1j.jpg',
       large: 'https://i.imgur.com/M372Zzc.jpg'
     },
@@ -199,6 +217,7 @@ const menu = [
     prices: { small: 50, large: 60 },
     detailCss: ['item-detail'],
     srcUrls: {
+      icon: 'https://i.imgur.com/2dkW9IT.jpg',
       small: 'https://i.imgur.com/f8UEFTZ.jpg',
       large: 'https://i.imgur.com/pi36sx4.jpg'
     },
@@ -216,6 +235,7 @@ const menu = [
     prices: { small: 60, large: 70 },
     detailCss: ['item-detail'],
     srcUrls: {
+      icon: 'https://i.imgur.com/roVodWd.png',
       small: 'https://i.imgur.com/50Cl2YZ.jpg',
       large: 'https://i.imgur.com/hRhQ5AM.jpg'
     },
