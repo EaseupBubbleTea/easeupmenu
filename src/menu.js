@@ -1,3 +1,10 @@
+/**
+ * 
+ * menu[x][srcurls][icon] = 
+ * 
+ * 
+ */
+
 const menu = [
   {
     name: { eng: 'Signature', th: 'ชานมไข่มุกต้นตำหรับ' },

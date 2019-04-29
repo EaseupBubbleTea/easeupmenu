@@ -1,7 +1,7 @@
 import React from 'react';
 import { domID } from '../constant';
 const Menu = props => {
-  const { selected ,onItemClick, checked , onMenuClick } = props;
+  const { selected, onItemClick, checked, onMenuClick } = props;
 
   const mainMenu = [
     'mainMenu__link',
@@ -39,12 +39,12 @@ const Menu = props => {
       <div className="mainMenu__background">&nbsp;</div>
       <nav className="mainMenu__nav">
         <ul className="mainMenu__list">
-          <li className="mainMenu__item">
-            <button className={mainMenu} id={domID.mainMeu.main} onClick={onItemClick}>
-              Main
+          <li className="mainMenu__item" onClick={onItemClick}>
+            <button className={mainMenu} id={domID.mainMeu.main}>
+              Menu
             </button>
           </li>
-          <li className="mainMenu__item">
+          {/* <li className="mainMenu__item">
             <button className={announcement} id={domID.mainMeu.announcement}  onClick={onItemClick}>
               announcement
             </button>
@@ -63,7 +63,7 @@ const Menu = props => {
             <button className={about} id={domID.mainMeu.about}  onClick={onItemClick}>
               About
             </button>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

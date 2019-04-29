@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const SMALL = 'small';
 const LARGE = 'large';
-class LazyImage extends Component {
+class LazyBackgroundImage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ class LazyImage extends Component {
     this.smallImg.onload = () => {
       this.setState(
         () => {
-          return { smallImage: this.smallImg, loadedSmall: true };
+          return { smallImage: this.smallImg , loadedSmall: true };
         },
         () => {
           this.largeImg.src = srcUrls[LARGE];
@@ -48,57 +48,58 @@ class LazyImage extends Component {
 
     this.smallImg.src = srcUrls[SMALL];
   }
-  
   //   'menuItem', 'menuItem__signature'
   render() {
     const { className, svgPlaceHolder } = this.props;
 
-    if (this.state.loadedLarge) {
-      return (
-        <img
-        src={this.state.largeImage.src}
-          className={className}
-          style={{ ...this.props.style }}
-          alt=""
-        />
-      );
+    if(this.state.loadedLarge){
+        return (
+            <div
+              className={className}
+              style={{
+                backgroundImage: `url(${this.state.largeImage.src})`,
+              }}
+            />
+          );
     }
-    if (this.state.loadedSmall) {
-      return (
-        <img
-        src={this.state.smallImage.src}
-          className={className}
-          style={{ ...this.props.style }}
-          alt=""
-        />
-      );
+    if(this.state.loadedSmall){
+        return (
+            <div
+              className={className}
+              style={{
+                backgroundImage: `url(${this.state.smallImage.src})`,
+              }}
+            />
+          );
     }
     if (this.state.smallError || this.state.largeError) {
-      return (
-        <img
-        src={window.location.origin + easeUpLogo}
-          className={className}
-          style={{ ...this.props.style }}
-          alt=""
-        />
-      );
-    }
+        return (
+          <div
+            className={className}
+            style={{
+              backgroundImage: `url(${window.location.origin + easeUpLogo})`,
+              backgroundSize: 'contain'
+            }}
+          />
+        );
+      }
 
     return (
-      <img
-        src={`url(${window.location.origin + svgPlaceHolder})`}
+      <div
         className={className}
-        style={{ ...this.props.style }}
-        alt=""
+        style={{...{
+          backgroundImage: `url(${window.location.origin + svgPlaceHolder})`,
+          backgroundSize: 'initial'
+        },...this.props.style}}
       />
     );
   }
 }
 
-LazyImage.propTypes = {
+LazyBackgroundImage.propTypes = {
   srcUrls: PropTypes.object,
   className: PropTypes.string,
-  svgPlaceHolder: PropTypes.any
+  svgPlaceHolder: PropTypes.any,
 };
 
-export default LazyImage;
+export default LazyBackgroundImage;
