@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://EaseupBubbleTea.github.io/easeupmenu/",
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.13",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
