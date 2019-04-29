@@ -9,7 +9,7 @@ const ListItem = props => {
       <div className="listItem__pic">
         <img src={menu.srcUrls.icon}/>
       </div>
-      <div className="listItem__name">{menu.name.eng}</div>
+      <div className="listItem__name"><p>{menu.name.th}</p></div>
     </div>
   );
 };
