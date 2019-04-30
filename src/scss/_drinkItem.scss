@@ -62,17 +62,18 @@ $menu-footer-height: 3rem;
         margin: 2rem;
         display: flex;
         flex-direction: column;
-        div {
+        & > div {
           display: flex;
           margin-top: 0.2rem;
           flex-direction: row;
           justify-content: space-around;
-          border-bottom: 2px solid #d3d3d3;
+          border-bottom: 1px solid #d3d3d3;
+          padding-bottom: 1rem;
         }
       }
       &__topping {
-        border-top: 1px solid #333;
-        padding-top: 1rem;
+        // border-top: 1px solid rgba(#333, 0.5);
+        // padding-top: 1rem;
         margin: 2rem;
         font-size: 1.2rem;
         text-align: center;
@@ -89,7 +90,7 @@ $menu-footer-height: 3rem;
       &__detail {
         font-size: 1.2rem;
         margin: 2rem;
-        border-top: 1px solid #333;
+        border-top: 1px solid rgba(#333, 0.5);
         padding-top: 1rem;
       }
     }

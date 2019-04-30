@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 // import ReactFullpage from '@fullpage/react-fullpage';
 // import easeupLogo from './img/easeupLogo.png';
 import menu from './menu';
-// import handUpAndDown from './img/001-finger_upAndDown.png';
-// import handLeftRight from './img/002-finger_leftAndRight.png';
 // import leftArrow from './img/four-dots-horizontally-aligned-as-a-line.png';
 import './App.scss';
 import languages from './langueages';
@@ -11,7 +9,7 @@ import languages from './langueages';
 // import placeHolder from './img/preload2.svg';
 // import LazyImage from './component/LazyImage';
 import Main from './component/Main';
-import Menu from './component/Menu';
+// import Menu from './component/AppMenu';
 import { domID } from './constant';
 import DrinkItem from './component/DrinkItem';
 import Announcement from './component/Announcement';
@@ -19,21 +17,23 @@ import Location from './component/Location';
 // import Commnet from './component/Comment';
 import Commment from './component/Comment';
 import About from './component/About';
+import AppMenu from './component/AppMenu';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.pageCache = {
-      main: <Main onMenuClick={this.onDrinkMenuClick} />,
-      drinkMenus: {}
-    };
     this.drinkMenusMap = {};
     this.state = {
       lang: 'th',
       currentView: null,
+      _currentViewId: null,
       mainMenuSelected: domID.mainMeu.main,
       mainMenuChecked: false
+    };
+    this.pageCache = {
+      main: <Main onMenuClick={this.onDrinkMenuClick} lang={this.state.lang} />,
+      drinkMenus: {}
     };
   }
 
@@ -44,59 +44,112 @@ class App extends Component {
       () => {
         switch (this.state.mainMenuSelected) {
           case domID.mainMeu.main:
-            this.setState({ currentView: this.pageCache.main });
+            this.setState({
+              currentView: this.pageCache.main,
+              _currentViewId: domID.mainMeu.main
+            });
             break;
           case domID.mainMeu.announcement:
             if (!this.pageCache.announcement) {
               this.pageCache.announcement = <Announcement />;
             }
-            this.setState({ currentView: this.pageCache.announcement });
+            this.setState({
+              currentView: this.pageCache.announcement,
+              _currentViewId: domID.mainMeu.announcement
+            });
             break;
           case domID.mainMeu.location:
             if (!this.pageCache.location) {
               this.pageCache.location = <Location />;
             }
-            this.setState({ currentView: this.pageCache.location });
+            this.setState({
+              currentView: this.pageCache.location,
+              _currentViewId: domID.mainMeu.location
+            });
             break;
           case domID.mainMeu.comment:
             if (!this.pageCache.comment) {
               this.pageCache.comment = <Commment />;
             }
-            this.setState({ currentView: this.pageCache.comment });
+            this.setState({
+              currentView: this.pageCache.comment,
+              _currentViewId: domID.mainMeu.comment
+            });
             break;
           case domID.mainMeu.about:
             if (!this.pageCache.about) {
               this.pageCache.about = <About />;
             }
-            this.setState({ currentView: this.pageCache.about });
+            this.setState({
+              currentView: this.pageCache.about,
+              _currentViewId: domID.mainMeu.about
+            });
             break;
           default:
         }
       }
     );
-    console.log('onMenuItem');
   };
 
+  onLangSelect = lang => {
+    this.setState(
+      () => ({ lang: lang }),
+      () => {
+        switch (this.state._currentViewId) {
+          case domID.mainMeu.main: {
+            this.pageCache.main = (
+              <Main
+                onMenuClick={this.onDrinkMenuClick}
+                lang={this.state.lang}
+              />
+            );
+            this.setState({ currentView: this.pageCache.main });
+            break;
+          }
+
+          default: {
+            let x = this.pageCache.drinkMenus[this.state._currentViewId];
+            if (x) {
+              const menu = this.drinkMenusMap[this.state._currentViewId];
+              this.pageCache.drinkMenus[this.state._currentViewId] = (
+                <DrinkItem
+                  item={menu}
+                  lang={this.state.lang}
+                  onPreviousClick={() => this.onPreviousClick(menu.number)}
+                  onHomeClick={this.onHomeClick}
+                  onNextClick={() => this.onNextClick(menu.number)}
+                />
+              );
+              this.setState({ currentView: this.pageCache.drinkMenus[this.state._currentViewId] });
+              break;
+            }
+          }
+        }
+      }
+    );
+  };
   onDrinkMenuClick = menuId => {
-    console.log('onMenuCLick ', menuId);
     const nextView = this.pageCache.drinkMenus[menuId];
     if (nextView) {
-      this.setState({ currentView: nextView });
+      this.setState({ currentView: nextView, _currentViewId: menuId });
       return;
     }
 
-    const menu = this.drinkMenusMap[menuId]
+    const menu = this.drinkMenusMap[menuId];
 
     this.pageCache.drinkMenus[menuId] = (
       <DrinkItem
         item={menu}
         lang={this.state.lang}
-        onPreviousClick={ ()=> this.onPreviousClick(menu.number)}
-        onHomeClick={ this.onHomeClick}
-        onNextClick={ () => this.onNextClick(menu.number)}
+        onPreviousClick={() => this.onPreviousClick(menu.number)}
+        onHomeClick={this.onHomeClick}
+        onNextClick={() => this.onNextClick(menu.number)}
       />
     );
-    this.setState({ currentView: this.pageCache.drinkMenus[menuId] });
+    this.setState({
+      currentView: this.pageCache.drinkMenus[menuId],
+      _currentViewId: menuId
+    });
     return;
   };
 
@@ -104,24 +157,24 @@ class App extends Component {
     this.onMainMenuItemClick(domID.mainMeu.main);
   };
 
-  onPreviousClick =(currentID) =>{
-    console.log("onPreviousClick : " , currentID)
-    this.onDrinkMenuClick(currentID - 1)
-  }
+  onPreviousClick = currentID => {
+    this.onDrinkMenuClick(currentID - 1);
+  };
 
-  onNextClick =(currentID)=>{
-    console.log("onNextClick : " , currentID)
-    this.onDrinkMenuClick(currentID + 1)
-  }
+  onNextClick = currentID => {
+    this.onDrinkMenuClick(currentID + 1);
+  };
 
   onAppMenuClick = e => {
     this.setState({ mainMenuChecked: !this.state.mainMenuChecked });
-    console.log('onAppMenuClick ', e);
   };
 
   componentDidMount = () => {
     if (!this.state.currentView) {
-      this.setState({ currentView: this.pageCache.main });
+      this.setState({
+        currentView: this.pageCache.main,
+        _currentViewId: domID.mainMeu.main
+      });
     }
     menu.forEach(x => {
       this.drinkMenusMap[x.number] = x;
@@ -146,15 +199,18 @@ class App extends Component {
   render() {
     return (
       <div className="appContainer">
-        <Menu
+        <AppMenu
           selected={this.state.mainMenuSelected}
           onMenuClick={this.onAppMenuClick}
           checked={this.state.mainMenuChecked}
           onItemClick={e => {
             this.onMainMenuItemClick(e.target.id);
           }}
+          onLangSelect={this.onLangSelect}
+          lang={this.state.lang}
         />
         {this.state.currentView}
+        {/* <Main onMenuClick={this.onDrinkMenuClick} lang={this.state.lang} /> */}
       </div>
     );
   }

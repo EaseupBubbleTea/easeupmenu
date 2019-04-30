@@ -1,6 +1,10 @@
 .mainMenu {
   $color-inner-menu-cycle: rgb(241, 239, 237);
   $color-outter-menu-cycle: rgb(240, 240, 240);
+
+  $color-inner-menu-cycle-checked: #9e9e9e;
+  $color-outter-menu-cycle-checked: #e2e2e2;
+
   $circle-size: 2.2rem;
   &__checkbox {
     display: none;
@@ -64,6 +68,24 @@
     border-radius: 3px;
     border: 1px solid #b1a79d;
     // width: 100%;
+    padding: 0.5rem;
+    &--languages{
+      margin-bottom: 10vh;
+      border: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      button{
+        border: 1px solid #b1a79d;
+        background: none;
+        font-size: 1.2rem;
+        // margin: 0 2rem;
+        padding: 0.5rem;
+        width: 100%;
+        border-radius: .5rem;
+      }
+    }
   }
   &__link {
     font-size: 2rem;
@@ -79,7 +101,13 @@
 
   &__checkbox:checked ~ &__background {
     transform: scale(80);
-    opacity: 0.8;
+    opacity: 0.82;
+
+       background-image: radial-gradient(
+      $color-inner-menu-cycle-checked,
+      $color-outter-menu-cycle-checked
+    );
+    
   }
 
   &__checkbox:checked ~ &__nav {

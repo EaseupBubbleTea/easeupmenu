@@ -13,12 +13,26 @@ class Main extends Component {
 
   componentDidMount = () => {
     let menus = [];
-    const { onMenuClick } = this.props;
+    const { onMenuClick,lang } = this.props;
     menu.forEach(x => {
-      menus.push(<ListItem menu={x} onClick={() => onMenuClick(x.number)} key={x.number} />);
+      menus.push(<ListItem menu={x} onClick={() => onMenuClick(x.number)} key={x.number} lang={lang} />);
     });
     this.setState({ menus });
   };
+
+  componentDidUpdate(prevProps) {
+    const { onMenuClick,lang } = this.props;
+
+    if (lang !== prevProps.lang) {
+      // this.fetchData(this.props.userID);
+      let menus = [];      
+      menu.forEach(x => {
+        menus.push(<ListItem menu={x} onClick={() => onMenuClick(x.number)} key={x.number} lang={lang} />);
+      });
+      this.setState({ menus });
+      
+    }
+  }
 
   render() {
     return <div className="mainPage">

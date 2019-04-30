@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import LazyImage from './LazyImage';
 import imgePlaceHolder from '../img/preloader.svg';
+import languages from '../langueages';
 
 class DrinkItem extends Component {
+  text = key => {
+    return languages[key][this.props.lang];
+  };
 
   render() {
     const {
       item,
       lang,
       // onPreviousClick,
-      onHomeClick,
+      onHomeClick
       // onNextClick
     } = this.props;
 
@@ -37,16 +41,14 @@ class DrinkItem extends Component {
             </div>
             <div className="drinkItem__body__content__price">
               <div>
-                <div>Small</div>
+                <div>{this.text('smallCup')}</div>
                 <div>{item.prices.small}</div>
-                <div>บาท</div>
+                <div>{this.text('bath')}</div>
               </div>
               <div>
-                <div>
-                  <b>Large</b>
-                </div>
+                <div>{this.text('largeCup')}</div>
                 <div>{item.prices.large}</div>
-                <div>บาท</div>
+                <div>{this.text('bath')}</div>
               </div>
             </div>
             <div className="drinkItem__body__content__topping">

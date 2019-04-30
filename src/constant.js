@@ -8,4 +8,11 @@ const domID = {
   }
 };
 
-export { domID };
+const LANG = {
+  eng: 'eng',
+  th: 'th'
+};
+
+
+
+export { domID, LANG };
