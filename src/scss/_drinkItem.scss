@@ -22,6 +22,8 @@ $menu-footer-height: 3rem;
     grid-template-columns: 1fr;
     grid-template-rows: $menu-name-height 1fr;
     &__banner {
+      // background-color:	#FCFCFC;
+      background:linear-gradient(180deg, rgba(252 , 252 , 252 , 0) 98%, rgba(90 , 90 , 90 , 0.52) 100%);
       display: grid;
       grid-template-columns: 3rem 1fr;
       font-size: 1.5rem;
@@ -99,6 +101,9 @@ $menu-footer-height: 3rem;
   &__footer {
     display: flex;
     justify-content: space-around;
+    background:linear-gradient(0deg, rgba(252 , 252 , 252 , 0) 98%, rgba(90 , 90 , 90 , 0.52) 100%);
+    // background-color:	#FCFCFC;
+    padding-top: .5rem;
     // button {
     //   text-align: center;
     //   border: none;
@@ -120,6 +125,7 @@ $menu-footer-height: 3rem;
       text-decoration: none;
       font-size: 1.2rem;
       text-shadow: 0px 1px 0px #4d3534;
+      background-color: transparent;
     }
     &--forward {
       width: 3rem;
