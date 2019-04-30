@@ -75,7 +75,7 @@ class DrinkItem extends Component {
             Previous
           </button> */}
           <button className="drinkItem__footer--home" onClick={onHomeClick}>
-            <img src={homeIcon} />
+            <img src={homeIcon} alt=""/>
           </button>
           {/* <button className="drinkItem__footer--forward" onClick={onNextClick}>
             Next
