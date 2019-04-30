@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LazyImage from './LazyImage';
 import imgePlaceHolder from '../img/preloader.svg';
 import languages from '../langueages';
+import homeIcon from '../img/home.png';
 
 class DrinkItem extends Component {
   text = key => {
@@ -40,11 +41,14 @@ class DrinkItem extends Component {
               {/* <img src={item.srcUrls.large} alt=""/> */}
             </div>
             <div className="drinkItem__body__content__price">
-              <div>
-                <div>{this.text('smallCup')}</div>
-                <div>{item.prices.small}</div>
-                <div>{this.text('bath')}</div>
-              </div>
+              {item.prices.small && (
+                <div>
+                  <div>{this.text('smallCup')}</div>
+                  <div>{item.prices.small}</div>
+                  <div>{this.text('bath')}</div>
+                </div>
+              )}
+
               <div>
                 <div>{this.text('largeCup')}</div>
                 <div>{item.prices.large}</div>
@@ -53,9 +57,11 @@ class DrinkItem extends Component {
             </div>
             <div className="drinkItem__body__content__topping">
               <div>
-                <p>
-                  <b>Topping</b>
-                </p>
+                {item.topping && (
+                  <p>
+                    <b>Topping</b>
+                  </p>
+                )}
               </div>
               <div>{item.topping && topping(item.topping)}</div>
             </div>
@@ -69,7 +75,7 @@ class DrinkItem extends Component {
             Previous
           </button> */}
           <button className="drinkItem__footer--home" onClick={onHomeClick}>
-            Home
+            <img src={homeIcon} />
           </button>
           {/* <button className="drinkItem__footer--forward" onClick={onNextClick}>
             Next
