@@ -95,14 +95,12 @@ class App extends Component {
     this.setState(
       () => ({ lang: lang }),
       () => {
+        this.pageCache.main = (
+          <Main onMenuClick={this.onDrinkMenuClick} lang={this.state.lang} />
+        );
+
         switch (this.state._currentViewId) {
           case domID.mainMeu.main: {
-            this.pageCache.main = (
-              <Main
-                onMenuClick={this.onDrinkMenuClick}
-                lang={this.state.lang}
-              />
-            );
             this.setState({ currentView: this.pageCache.main });
             break;
           }
@@ -120,7 +118,11 @@ class App extends Component {
                   onNextClick={() => this.onNextClick(menu.number)}
                 />
               );
-              this.setState({ currentView: this.pageCache.drinkMenus[this.state._currentViewId] });
+              this.setState({
+                currentView: this.pageCache.drinkMenus[
+                  this.state._currentViewId
+                ]
+              });
               break;
             }
           }
