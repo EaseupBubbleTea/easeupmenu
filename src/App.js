@@ -99,6 +99,19 @@ class App extends Component {
           <Main onMenuClick={this.onDrinkMenuClick} lang={this.state.lang} />
         );
 
+        Object.keys(this.pageCache.drinkMenus).forEach(x => {
+          const menu = this.drinkMenusMap[x];
+          this.pageCache.drinkMenus[x] = (
+            <DrinkItem
+              item={menu}
+              lang={this.state.lang}
+              onPreviousClick={() => this.onPreviousClick(menu.number)}
+              onHomeClick={this.onHomeClick}
+              onNextClick={() => this.onNextClick(menu.number)}
+            />
+          );
+        });
+
         switch (this.state._currentViewId) {
           case domID.mainMeu.main: {
             this.setState({ currentView: this.pageCache.main });
@@ -108,16 +121,6 @@ class App extends Component {
           default: {
             let x = this.pageCache.drinkMenus[this.state._currentViewId];
             if (x) {
-              const menu = this.drinkMenusMap[this.state._currentViewId];
-              this.pageCache.drinkMenus[this.state._currentViewId] = (
-                <DrinkItem
-                  item={menu}
-                  lang={this.state.lang}
-                  onPreviousClick={() => this.onPreviousClick(menu.number)}
-                  onHomeClick={this.onHomeClick}
-                  onNextClick={() => this.onNextClick(menu.number)}
-                />
-              );
               this.setState({
                 currentView: this.pageCache.drinkMenus[
                   this.state._currentViewId
