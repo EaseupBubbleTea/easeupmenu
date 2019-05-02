@@ -87,7 +87,7 @@ const menu = [
     topping: [{ bubble: 5 }]
   },
   {
-    name: { eng: 'Kuromitsu Milk Tea', th: 'คุโร่มิทสึ' },
+    name: { eng: 'Kuromitsu Milk Tea', th: 'คุโรมิทสึ' },
     number: 5,
     desc: {
       eng: ``,
