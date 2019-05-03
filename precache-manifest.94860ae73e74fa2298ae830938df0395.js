@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "fb2ca8545fb0cfcb40ed",
+    "revision": "4083da0b5c67a9a30eff",
     "url": "/easeupmenu/static/css/main.da32f388.chunk.css"
   },
   {
-    "revision": "fb2ca8545fb0cfcb40ed",
-    "url": "/easeupmenu/static/js/main.043d73d7.chunk.js"
+    "revision": "4083da0b5c67a9a30eff",
+    "url": "/easeupmenu/static/js/main.a3234236.chunk.js"
   },
   {
     "revision": "b6a86cc86502cda6bd02",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/easeupmenu/static/media/preloader.2c79a2bd.svg"
   },
   {
-    "revision": "de2d53348454ec42384026f786673ff4",
+    "revision": "fad923683eb0caddc44a58681aa33d13",
     "url": "/easeupmenu/index.html"
   }
 ];
