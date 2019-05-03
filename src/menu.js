@@ -110,7 +110,7 @@ const menu = [
       th: `
       มัทฉะที่ดีที่สุด จะมีความขมฝาดน้อย เขียวสด แต่จะคงความเข้มข้นและหอมสดชื่นของชาเขียวแท้สไตล์ญี่ปุ่น ชงด้วยือแก้วต่อแก้ว ราดลงไปบนนมโคสดอย่างดี.`
     },
-    prices: { large: 90 },
+    prices: { large: 100 },
     detailCss: ['item-detail', 'item-detail__elegantMatcha'],
     srcUrls: {
       icon: 'https://i.imgur.com/GZiS25u.jpg',
