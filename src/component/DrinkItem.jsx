@@ -49,11 +49,20 @@ class DrinkItem extends Component {
                 </div>
               )}
 
+              {item.prices.standard && (
+                <div>
+                  <div>{this.text('standardCup')}</div>
+                  <div>{item.prices.standard}</div>
+                  <div>{this.text('bath')}</div>
+                </div>
+              )}
+              {item.prices.large && (
               <div>
                 <div>{this.text('largeCup')}</div>
                 <div>{item.prices.large}</div>
                 <div>{this.text('bath')}</div>
               </div>
+              )}
             </div>
             <div className="drinkItem__body__content__topping">
               <div>

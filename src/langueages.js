@@ -35,6 +35,10 @@ const languages = {
     eng: 'Small',
     th: 'แก้วเล็ก'
   },
+  standardCup: {
+    eng: 'Standard',
+    th: 'แก้วปกติ'
+  },
   largeCup: {
     eng: 'Large',
     th: 'แก้วใหญ่'
