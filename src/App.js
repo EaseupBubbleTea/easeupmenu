@@ -214,15 +214,17 @@ class App extends Component {
           onLangSelect={this.onLangSelect}
           lang={this.state.lang}
         />
-        <div className="appUsage">
-          {this.state.lang === "th" && (
-            <p>
-              คลิกเข้าไปในเมนูเพื่อดูราคา <br /> ละรายละเอียดค่ะ
-            </p>
-          )}
-          {this.state.lang === "eng" &&
-            "Please click on a menu for more detail."}
-        </div>
+        {this.state._currentViewId === domID.mainMeu.main && (
+          <div className="appUsage">
+            {this.state.lang === "th" && (
+              <p>
+                คลิกเข้าไปในเมนูเพื่อดูราคา <br /> ละรายละเอียดค่ะ
+              </p>
+            )}
+            {this.state.lang === "eng" &&
+              "Please click on a menu for more detail."}
+          </div>
+        )}
         {this.state.currentView}
         {/* <Main onMenuClick={this.onDrinkMenuClick} lang={this.state.lang} /> */}
       </div>
