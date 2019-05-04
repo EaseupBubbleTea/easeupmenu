@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import ReactFullpage from '@fullpage/react-fullpage';
 // import easeupLogo from './img/easeupLogo.png';
-import menu from './menu';
+import menu from "./menu";
 // import leftArrow from './img/four-dots-horizontally-aligned-as-a-line.png';
-import './App.scss';
-import languages from './langueages';
+import "./App.scss";
+import languages from "./langueages";
 // import MenuSlide from './component/MenuSlide';
 // import placeHolder from './img/preload2.svg';
 // import LazyImage from './component/LazyImage';
-import Main from './component/Main';
+import Main from "./component/Main";
 // import Menu from './component/AppMenu';
-import { domID } from './constant';
-import DrinkItem from './component/DrinkItem';
-import Announcement from './component/Announcement';
-import Location from './component/Location';
+import { domID } from "./constant";
+import DrinkItem from "./component/DrinkItem";
+import Announcement from "./component/Announcement";
+import Location from "./component/Location";
 // import Commnet from './component/Comment';
-import Commment from './component/Comment';
-import About from './component/About';
-import AppMenu from './component/AppMenu';
+import Commment from "./component/Comment";
+import About from "./component/About";
+import AppMenu from "./component/AppMenu";
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class App extends Component {
 
     this.drinkMenusMap = {};
     this.state = {
-      lang: 'th',
+      lang: "th",
       currentView: null,
       _currentViewId: null,
       mainMenuSelected: domID.mainMeu.main,
@@ -214,6 +214,15 @@ class App extends Component {
           onLangSelect={this.onLangSelect}
           lang={this.state.lang}
         />
+        <div className="appUsage">
+          {this.state.lang === "th" && (
+            <p>
+              คลิกเข้าไปในเมนูเพื่อดูราคา <br /> ละรายละเอียดค่ะ
+            </p>
+          )}
+          {this.state.lang === "eng" &&
+            "Please click on a menu for more detail."}
+        </div>
         {this.state.currentView}
         {/* <Main onMenuClick={this.onDrinkMenuClick} lang={this.state.lang} /> */}
       </div>

@@ -37,6 +37,15 @@ body {
   overflow: auto;
 }
 
+.appUsage{
+  margin: 2rem auto .5rem ;
+  color: #555;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: rgba($color: #fefefe, $alpha: 0.8);
+  text-align: center;
+}
+
 @import './scss/main';
 @import './scss/listitem';
 @import './scss/menu';
