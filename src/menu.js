@@ -51,7 +51,7 @@ const menu = [
     topping: [{ Popping: 10 }]
   },
   {
-    name: { eng: 'Oolong iced tea', th: 'บาร์เล่อู่หลง' },
+    name: { eng: 'Barley oolong', th: 'บาร์เล่อู่หลง' },
     number: 3,
     desc: {
       eng: ``,
@@ -87,7 +87,7 @@ const menu = [
     topping: [{ bubble: 5 }]
   },
   {
-    name: { eng: 'Kuromitsu Milk Tea', th: 'คุโรมิทสึ' },
+    name: { eng: 'Kuromitsu Milk Tea', th: 'คุโรมิทสึมิลค์ที' },
     number: 5,
     desc: {
       eng: ``,
