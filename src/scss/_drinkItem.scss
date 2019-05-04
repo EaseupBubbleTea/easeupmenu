@@ -25,12 +25,23 @@ $menu-footer-height: 3rem;
       // background-color:	#FCFCFC;
       background:linear-gradient(180deg, rgba(252 , 252 , 252 , 0) 98%, rgba(90 , 90 , 90 , 0.52) 100%);
       display: grid;
-      grid-template-columns: 3rem 1fr;
+      grid-template-columns: 5rem 1fr;
       font-size: 1.5rem;
       text-align: center;
       line-height: $menu-name-height;
       :nth-child(2) {
         text-align: left;
+      }
+
+      &--home{
+        border: none;
+        background: none;
+        img{
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+        margin-right: .5rem;
+        margin-left: .5rem;
       }
     }
 

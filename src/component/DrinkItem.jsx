@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import LazyImage from './LazyImage';
-import imgePlaceHolder from '../img/preloader.svg';
-import languages from '../langueages';
-import homeIcon from '../img/home.png';
+import React, { Component } from "react";
+import LazyImage from "./LazyImage";
+import imgePlaceHolder from "../img/preloader.svg";
+import languages from "../langueages";
+import homeIcon from "../img/home.png";
 
 class DrinkItem extends Component {
   text = key => {
@@ -18,16 +18,21 @@ class DrinkItem extends Component {
       // onNextClick
     } = this.props;
 
-    let desc = item['desc']['th'];
-    if (lang === 'eng' && item['desc']['eng']) {
-      desc = item['desc']['eng'];
+    let desc = item["desc"]["th"];
+    if (lang === "eng" && item["desc"]["eng"]) {
+      desc = item["desc"]["eng"];
     }
 
     return (
       <div className="drinkItem">
         <div className="drinkItem__body">
           <div className="drinkItem__body__banner">
-            <div>{item.number}</div>
+            <div>
+              <button className="drinkItem__body__banner--home" onClick={onHomeClick}>
+                <img src={homeIcon} alt="" />
+              </button>
+              {item.number}
+            </div>
             <div>
               <b>{item.name[lang]}</b>
             </div>
@@ -43,25 +48,25 @@ class DrinkItem extends Component {
             <div className="drinkItem__body__content__price">
               {item.prices.small && (
                 <div>
-                  <div>{this.text('smallCup')}</div>
+                  <div>{this.text("smallCup")}</div>
                   <div>{item.prices.small}</div>
-                  <div>{this.text('bath')}</div>
+                  <div>{this.text("bath")}</div>
                 </div>
               )}
 
               {item.prices.standard && (
                 <div>
-                  <div>{this.text('standardCup')}</div>
+                  <div>{this.text("standardCup")}</div>
                   <div>{item.prices.standard}</div>
-                  <div>{this.text('bath')}</div>
+                  <div>{this.text("bath")}</div>
                 </div>
               )}
               {item.prices.large && (
-              <div>
-                <div>{this.text('largeCup')}</div>
-                <div>{item.prices.large}</div>
-                <div>{this.text('bath')}</div>
-              </div>
+                <div>
+                  <div>{this.text("largeCup")}</div>
+                  <div>{item.prices.large}</div>
+                  <div>{this.text("bath")}</div>
+                </div>
               )}
             </div>
             <div className="drinkItem__body__content__topping">
@@ -84,7 +89,7 @@ class DrinkItem extends Component {
             Previous
           </button> */}
           <button className="drinkItem__footer--home" onClick={onHomeClick}>
-            <img src={homeIcon} alt=""/>
+            <img src={homeIcon} alt="" />
           </button>
           {/* <button className="drinkItem__footer--forward" onClick={onNextClick}>
             Next
@@ -104,8 +109,8 @@ const topping = topping => {
     for (const key in element) {
       trs.push(
         <tr key={key}>
-          <td style={{ textAlign: 'left' }}>{key}</td>
-          <td style={{ textAlign: 'right' }}>{element[key]}</td>
+          <td style={{ textAlign: "left" }}>{key}</td>
+          <td style={{ textAlign: "right" }}>{element[key]}</td>
         </tr>
       );
     }
